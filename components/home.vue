@@ -1,24 +1,76 @@
 <template>
-  <div class="home">
+  <section class="home">
     <topbar></topbar>
-  </div>
+    <div class="home__brand">
+      <!-- <h1 class="home__brand__header">Dielle S.R.L. Automazioni Industiali</h1> -->
+      <img class="home__brand__logo" src="~assets/icons/logo-white.svg" />
+    </div>
+    <div class="home__hero">
+      <h2 class="home__hero__header">
+        Software e
+        <br />Supervisione
+      </h2>
+      <p class="home__hero__sub">Disponibile per qualsiasi ulteriore informazione</p>
+      <btn class="home__hero__btn">Clicca per saperne di più</btn>
+    </div>
+  </section>
 </template>
+
 <script lang="ts">
-import topbar from "./topbar.vue";
+import Topbar from "./topbar.vue";
+import Btn from "./btn.vue";
 
 export default {
   name: "Home",
   components: {
-    topbar
+    Topbar,
+    Btn
   }
 };
 </script>
-<style>
+
+<style lang="scss">
 .home {
-  height: 200vh;
+  @include bg-gradient;
+
+  height: 100vh;
   width: 100vw;
-  background-image: url("~assets/images/background.png");
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+}
+
+.home__brand {
+  margin-top: 120px;
+
+  &__header {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__logo {
+    height: 400px;
+    width: 400px;
+    margin: 15px auto;
+    display: block;
+  }
+}
+
+.home__hero {
+  color: white;
+  position: absolute;
+  bottom: 120px;
+  left: 45px;
+
+  &__header {
+    font-size: 45px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__sub {
+    font-size: 17pt;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  &__btn {
+    margin-top: 10px;
+  }
 }
 </style>

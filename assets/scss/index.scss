@@ -1,0 +1,12 @@
+/*
+  Global styles. Only contains SCSS that does get render (elements classes).
+  
+  For SCSS specifics non rendered helpers (variables, methods, mixins), use the "~assents/scss/loaded" folder files loaded though nuxt.config.js.
+  Do not add rendered styles on those files!
+*/
+
+@import "reset";
+
+* {
+  font-family: "Fira Sans", sans-serif;
+}

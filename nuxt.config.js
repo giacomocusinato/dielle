@@ -30,7 +30,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["~assets/styles/global.scss"],
+  css: [{ src: "~assets/scss/index.scss", lang: "scss" }],
   /*
    ** Plugins to load before mounting the App
    */
@@ -38,7 +38,14 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: ["@nuxtjs/style-resources"],
+  styleResources: {
+    scss: [
+      "~assets/scss/loaded/_variables.scss",
+      "~assets/scss/loaded/_breakpoints.scss",
+      "~assets/scss/loaded/_gradient.scss"
+    ]
+  },
   /*
    ** Nuxt.js modules
    */
