@@ -1,15 +1,24 @@
 <template>
-  <home></home>
+  <div>
+    <navbar></navbar>
+    <home></home>
+    <about></about>
+  </div>
 </template>
 
 <script>
-import home from "~/components/home.vue";
+import Navbar from "~/components/navigation/navbar.vue";
+import Home from "~/components/home.vue";
+import About from "~/components/About.vue";
 
 export default {
   components: {
-    home
+    Navbar,
+    Home,
+    About
   }
 };
 </script>
 
-<style></style>
+<style>
+</style>

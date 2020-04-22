@@ -1,9 +1,7 @@
 <template>
   <section class="home">
-    <topbar></topbar>
     <div class="home__brand">
-      <!-- <h1 class="home__brand__header">Dielle S.R.L. Automazioni Industiali</h1> -->
-      <img class="home__brand__logo" src="~assets/icons/logo-white.svg" />
+      <img class="home__logo" src="~assets/icons/logo-white.svg" />
     </div>
     <div class="home__hero">
       <h2 class="home__hero__header">
@@ -17,40 +15,30 @@
 </template>
 
 <script lang="ts">
-import Topbar from "./topbar.vue";
-import Btn from "./btn.vue";
+import Btn from "./common/btn.vue";
 
 export default {
-  name: "Home",
   components: {
-    Topbar,
     Btn
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .home {
   @include bg-gradient;
+  @include home-wrapper;
 
   height: 100vh;
   width: 100vw;
+  padding-top: $navbar-height;
+  box-sizing: border-box;
 }
 
-.home__brand {
-  margin-top: 120px;
-
-  &__header {
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  &__logo {
-    height: 400px;
-    width: 400px;
-    margin: 15px auto;
-    display: block;
-  }
+.home__logo {
+  width: 400px;
+  margin: 0 auto;
+  display: block;
 }
 
 .home__hero {

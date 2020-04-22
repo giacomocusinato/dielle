@@ -5,14 +5,10 @@
 </template>
 
 <script>
-import TopbarMenu from "./topbar-menu";
-
-export default {
-  data: {}
-};
+export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .btn {
   font-size: 15px;
   padding: 15px;
