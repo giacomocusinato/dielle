@@ -12,7 +12,8 @@ export default {
         hid: "description",
         name: "description",
         content: process.env.npm_package_description || ""
-      }
+      },
+      { "http-equiv": "X-UA-Compatible", content: "IE=edge,chrome=1" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -41,9 +42,10 @@ export default {
   buildModules: ["@nuxtjs/style-resources"],
   styleResources: {
     scss: [
-      "~assets/scss/loaded/_variables.scss",
+      "~assets/scss/loaded/_branding.scss",
+      "~assets/scss/loaded/_typography.scss",
       "~assets/scss/loaded/_breakpoints.scss",
-      "~assets/scss/loaded/_gradient.scss"
+      "~assets/scss/loaded/_layout.scss"
     ]
   },
   /*
