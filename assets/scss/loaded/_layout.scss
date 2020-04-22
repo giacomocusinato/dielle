@@ -1,0 +1,21 @@
+$navbar-height: 90px;
+
+@mixin home-wrapper {
+  padding: 0 30px;
+}
+
+@mixin section-wrapper {
+  padding: 30px;
+
+  @include lg {
+    padding: 30px 120px;
+  }
+
+  @include xl {
+    padding: 30px 300px;
+  }
+
+  @include xl {
+    padding: 30px 600px;
+  }
+}

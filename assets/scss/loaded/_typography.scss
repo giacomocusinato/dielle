@@ -1,0 +1,19 @@
+$text-gray: #797979;
+
+@mixin section-header {
+  font-size: x-large;
+  font-weight: 300;
+  color: $text-gray;
+}
+
+@mixin section-text {
+  font-size: small;
+  font-weight: 300;
+  color: lighten($text-gray, 10%);
+}
+
+@mixin paragraph {
+  @include section-text;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
