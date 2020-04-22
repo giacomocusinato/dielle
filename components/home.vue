@@ -31,7 +31,7 @@ export default {
 
   height: 100vh;
   width: 100vw;
-  padding-top: $navbar-height;
+  padding-top: $navbar-height !important;
   box-sizing: border-box;
 }
 
@@ -45,7 +45,6 @@ export default {
   color: white;
   position: absolute;
   bottom: 120px;
-  left: 45px;
 
   &__header {
     font-size: 45px;

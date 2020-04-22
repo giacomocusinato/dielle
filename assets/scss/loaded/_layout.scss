@@ -2,6 +2,10 @@ $navbar-height: 90px;
 
 @mixin home-wrapper {
   padding: 0 30px;
+
+  @include lg {
+    padding: 0 60px;
+  }
 }
 
 @mixin section-wrapper {
