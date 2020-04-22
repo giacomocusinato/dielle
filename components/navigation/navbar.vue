@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  height: $navbar-height - 30px;
+  height: $navbar-height;
   width: 100%;
   position: absolute;
 
@@ -61,12 +61,14 @@ export default {
   &--sticky {
     position: sticky;
     top: 0;
-    height: $navbar-height;
+    height: $navbar-height + 15px;
     background-color: white;
-    transition: all 0.5s;
+    transition: all 0.7s;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.24);
 
     .navbar__title {
       color: black;
+      color: $text-gray;
     }
   }
 }

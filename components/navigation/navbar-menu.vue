@@ -56,10 +56,10 @@ export default {
 
   &--sticky {
     .navbar-menu__item {
-      color: black;
+      color: $text-gray;
     }
     .navbar-menu__bull {
-      color: black;
+      color: $text-gray;
     }
   }
 }
