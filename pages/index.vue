@@ -3,6 +3,7 @@
     <navbar></navbar>
     <home></home>
     <about></about>
+    <contact></contact>
     <foo></foo>
   </div>
 </template>
@@ -11,6 +12,7 @@
 import Navbar from "~/components/navigation/navbar.vue";
 import Home from "~/components/home.vue";
 import About from "~/components/about.vue";
+import Contact from "~/components/contact.vue";
 import Footer from "~/components/footer.vue";
 
 export default {
@@ -18,6 +20,7 @@ export default {
     Navbar,
     Home,
     About,
+    Contact,
     foo: Footer
   }
 };

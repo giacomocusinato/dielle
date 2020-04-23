@@ -65,6 +65,7 @@ export default {
     background-color: white;
     transition: all 0.7s;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.24);
+    z-index: 5;
 
     .navbar__title {
       color: black;
