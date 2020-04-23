@@ -33,9 +33,6 @@ export default {
     mapSrc: function() {
       return `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJk6L_k3fWeEcRMsIo1T0YTjM&key=${process.env.NUXT_ENV_MAPS_API_KEY}`;
     }
-  },
-  mounted() {
-    console.log(process.env.NUXT_ENV_MAPS_API_KEY);
   }
 };
 </script>

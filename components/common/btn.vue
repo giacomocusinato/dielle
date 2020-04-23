@@ -8,7 +8,7 @@
 export default {
   props: {
     type: {
-      type: Boolean,
+      type: String,
       default: "default"
     },
     role: {
