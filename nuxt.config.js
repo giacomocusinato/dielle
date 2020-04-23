@@ -39,7 +39,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ["@nuxtjs/style-resources"],
+  buildModules: ["@nuxtjs/style-resources", "@nuxtjs/dotenv"],
   styleResources: {
     scss: [
       "~assets/scss/loaded/_branding.scss",
