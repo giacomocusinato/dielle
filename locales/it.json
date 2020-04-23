@@ -1,0 +1,15 @@
+{
+  "globals": {
+    "company_name": "Dielle"
+  },
+  "navbar": {
+    "menu": {
+      "home": "Home",
+      "about": "Chi Siamo",
+      "services": "Servizi",
+      "team": "Team",
+      "partners": "Partner",
+      "contacts": "Contatti"
+    }
+  }
+}

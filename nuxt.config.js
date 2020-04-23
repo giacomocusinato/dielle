@@ -51,7 +51,20 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: [
+    [
+      "nuxt-i18n",
+      {
+        locales: [
+          { code: "en", iso: "en-US", file: "en.json" },
+          { code: "it", iso: "it-IT", file: "it.json" }
+        ],
+        defaultLocale: "it",
+        lazy: true,
+        langDir: "locales/"
+      }
+    ]
+  ],
   /*
    ** Build configuration
    */

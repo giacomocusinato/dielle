@@ -1,7 +1,7 @@
 <template>
   <div class="navbar" :class="{ 'navbar--sticky': isSticky }">
     <div class="navbar__wrapper">
-      <h1 class="navbar__title">Dielle</h1>
+      <h1 class="navbar__title">{{ $t("globals.company_name") }}</h1>
       <navbar-menu :is-navbar-sticky="isSticky"></navbar-menu>
     </div>
   </div>

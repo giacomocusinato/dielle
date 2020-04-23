@@ -1,28 +1,40 @@
 <template>
   <nav>
-    <ul class="navbar-menu" :class="{'navbar-menu--sticky': isNavbarSticky}">
+    <ul class="navbar-menu" :class="{ 'navbar-menu--sticky': isNavbarSticky }">
       <li class="navbar-menu__item">
-        <a data-ref="home" v-on:click="onMenuItemClick">Home</a>
+        <a data-ref="home" v-on:click="onMenuItemClick">{{
+          $t("navbar.menu.home")
+        }}</a>
       </li>
       <span class="navbar-menu__bull">&bull;</span>
       <li class="navbar-menu__item">
-        <a data-ref="about" v-on:click="onMenuItemClick">Chi siamo</a>
+        <a data-ref="about" v-on:click="onMenuItemClick">{{
+          $t("navbar.menu.about")
+        }}</a>
       </li>
       <span class="navbar-menu__bull">&bull;</span>
       <li class="navbar-menu__item">
-        <a data-ref="home" v-on:click="onMenuItemClick">Servizi</a>
+        <a data-ref="home" v-on:click="onMenuItemClick">{{
+          $t("navbar.menu.services")
+        }}</a>
       </li>
       <span class="navbar-menu__bull">&bull;</span>
       <li class="navbar-menu__item">
-        <a data-ref="home" v-on:click="onMenuItemClick">Team</a>
+        <a data-ref="home" v-on:click="onMenuItemClick">{{
+          $t("navbar.menu.team")
+        }}</a>
       </li>
       <span class="navbar-menu__bull">&bull;</span>
       <li class="navbar-menu__item">
-        <a data-ref="home" v-on:click="onMenuItemClick">Partner</a>
+        <a data-ref="home" v-on:click="onMenuItemClick">{{
+          $t("navbar.menu.partners")
+        }}</a>
       </li>
       <span class="navbar-menu__bull">&bull;</span>
       <li class="navbar-menu__item">
-        <a data-ref="home" v-on:click="onMenuItemClick">Contatti</a>
+        <a data-ref="home" v-on:click="onMenuItemClick">{{
+          $t("navbar.menu.contacts")
+        }}</a>
       </li>
     </ul>
   </nav>
