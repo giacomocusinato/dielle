@@ -10,16 +10,15 @@ $navbar-height: 60px;
 
 @mixin section-wrapper {
   padding: 30px;
+  margin: 0 auto;
 
   @include lg {
     padding: 30px 120px;
+    max-width: 768px;
   }
 
   @include xl {
     padding: 30px 300px;
-  }
-
-  @include xl {
-    padding: 30px 600px;
+    max-width: 1024px;
   }
 }

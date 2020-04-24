@@ -23,6 +23,12 @@ $screen-xxl-min: 2400px;
 }
 
 @mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin xxl {
   @media (min-width: #{$screen-xxl-min}) {
     @content;
   }
