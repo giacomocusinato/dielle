@@ -1,21 +1,19 @@
 <template>
   <footer class="footer">
-    <img class="footer__logo" src="~assets/icons/logo-white.svg" />
-    <div class="footer__entries">
-      <div class="footer__entry">
-        <h4 class="footer__entry__header">Contatti</h4>
-        <div class="footer__entry__text">
-          Via Galileo Galilei 1, Galliera Veneta (PD) 35015
-          <br />
-          049548291
-          <br />
-          info@dielleimpianti.it
+    <div class="footer__wrapper">
+      <img class="footer__logo" src="~assets/icons/logo-white.svg" />
+      <div class="footer__entries">
+        <div class="footer__entry">
+          <h4 class="footer__entry__header">Contatti</h4>
+          <div class="footer__entry__text">
+            Via Galileo Galilei 1, Galliera Veneta (PD) 35015
+            <br />049548291
+            <br />info@dielleimpianti.it
+          </div>
         </div>
-      </div>
-      <div class="footer__entry">
-        <h4 class="footer__entry__header">Lavora con noi</h4>
-        <div class="footer__entry__text">
-          Clicca qui per inviare il tuo curriculum
+        <div class="footer__entry">
+          <h4 class="footer__entry__header">Lavora con noi</h4>
+          <div class="footer__entry__text">Clicca qui per inviare il tuo curriculum</div>
         </div>
       </div>
     </div>
@@ -29,10 +27,14 @@ export default {};
 <style lang="scss" scoped>
 .footer {
   @include bg-gradient;
+
+  width: 100%;
+}
+
+.footer__wrapper {
   @include section-wrapper;
 
-  padding-top: 30px !important;
-  padding-bottom: 0 !important;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
 }

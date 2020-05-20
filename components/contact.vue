@@ -8,38 +8,42 @@
         Il nostro personale qualificato risponderà ad ogni vostra domanda e vi
         indicherà la soluzione più adeguata al vostro bisogno.
       </div>
+      <div class="contact__cards">
+        <card class="contact__card" title="I nostri uffici">
+          <contact-location />
+        </card>
+        <card class="contact__card" title="Contattaci">
+          <contact-form />
+        </card>
+      </div>
       <btn type="primary" class="contact__btn">Inviaci una email</btn>
     </div>
-
-    <!-- <iframe
-      class="contact__map"
-      frameborder="0"
-      :src="mapSrc"
-      allowfullscreen
-    ></iframe> -->
   </section>
 </template>
 
 <script>
 import Spacer from "./common/spacer.vue";
+import Card from "./common/card.vue";
+import ContactLocation from "./contact/contact-location.vue";
+import ContactForm from "./contact/contact-form.vue";
 import Btn from "./common/btn.vue";
 
 export default {
   components: {
     Spacer,
+    Card,
+    ContactLocation,
+    ContactForm,
     Btn
-  },
-  computed: {
-    mapSrc: function() {
-      return `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJk6L_k3fWeEcRMsIo1T0YTjM&key=${process.env.NUXT_ENV_MAPS_API_KEY}`;
-    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .contact {
-  background-color: #f8f8ff;
+  // background-color: #f8f8ff;
+  background-image: url("~assets/images/contact.png");
+  background-size: 100% 100%;
 }
 
 .contact__wrapper {
@@ -70,27 +74,17 @@ export default {
 .contact__btn {
   margin: 30px auto;
 }
-.contact__box {
-  // padding: 30px;
-  background-color: rgba($color: #000000, $alpha: 0.4);
-  opacity: 0.8;
+.contact__cards {
   display: flex;
-  width: 100%;
+  align-items: center;
+  margin-top: 30px;
 }
-.contact__map {
-  flex: 2;
-  width: 100%;
-  height: 480px;
-  margin-right: 30px;
-}
-.contact__info {
-  flex: 1;
-  margin-left: 30px;
-  color: white;
-
-  &__text {
-    @include paragraph;
-    color: white;
+.contact__card {
+  &:first-child {
+    margin-right: 15px;
+  }
+  &:last-child {
+    margin-left: 15px;
   }
 }
 </style>

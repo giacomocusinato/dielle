@@ -59,7 +59,7 @@ export default {
   }
 
   &--sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
     height: $navbar-height + 15px;
     background-color: white;

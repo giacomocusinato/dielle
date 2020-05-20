@@ -41,11 +41,15 @@ export default {
   }
 
   &--default {
-    font-size: 15px;
+    font-size: 13px;
     color: #797979;
     background-color: white;
     &:hover {
       background-color: darken(white, 5%);
+    }
+
+    @include lg {
+      font-size: 15px;
     }
   }
 

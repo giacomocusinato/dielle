@@ -36,28 +36,45 @@ export default {
 }
 
 .home__logo {
-  width: 400px;
-  margin: 0 auto;
+  width: 80%;
+  margin: 60px auto 0 auto;
   display: block;
+
+  @include lg {
+    width: 300px;
+  }
 }
 
 .home__hero {
   color: white;
-  position: absolute;
-  bottom: 120px;
-
+  margin: 60px;
+  text-align: center;
+  width: 350px;
+  margin: 120px auto;
+  // position: absolute;
+  // bottom: 30px;
   &__header {
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 400;
     text-transform: uppercase;
   }
   &__sub {
-    font-size: 17pt;
+    font-size: 17px;
     margin-top: 10px;
     font-weight: 400;
   }
   &__btn {
     margin-top: 10px;
+    margin: 10px auto;
+  }
+
+  @include lg {
+    &__header {
+      font-size: 45px;
+    }
+    &__sub {
+      font-size: 20px;
+    }
   }
 }
 </style>

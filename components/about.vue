@@ -60,8 +60,6 @@ export default {
 
   display: flex;
 }
-.about__main {
-}
 .about__header {
   @include section-header;
 }
