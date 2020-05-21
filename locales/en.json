@@ -19,5 +19,32 @@
       "services": "Services",
       "partners": "Partners"
     }
+  },
+  "services": {
+    "header": "Our services",
+    "description": "We're a company focused on building electrical panel cabinets, machine wiring and advanced industrial electrical automation.",
+    "items": {
+      "design": {
+        "name": "Design & Planning",
+        "description": "Design & Planning"
+      },
+      "electrical_panels": {
+        "name": "Electrical panels",
+        "description": "Electrical panels"
+      },
+      "industrial_software": {
+        "name": "Industrial software",
+        "description": "Industrial software"
+      },
+      "supervision_systems": {
+        "name": "Supervision systems",
+        "description": "Supervision systems"
+      },
+      "technical_assistance": {
+        "name": "Technical support",
+        "description": "Technical support"
+      },
+      "revamping": { "name": "Revamping", "description": "Revamping" }
+    }
   }
 }

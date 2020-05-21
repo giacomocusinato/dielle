@@ -19,5 +19,35 @@
       "services": "Servizi",
       "partners": "Partner"
     }
+  },
+  "services": {
+    "header": "I nostri servizi",
+    "description": "Un'azienda specializzata nella costruzione di quadri elettrici di comando, cablaggi bordomacchina ed automazioni industriali anche della massima sofisticazione.",
+    "items": {
+      "design": {
+        "name": "Progettazione",
+        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+      },
+      "electrical_panels": {
+        "name": "Quadri elettrici",
+        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+      },
+      "industrial_software": {
+        "name": "Software Industriale",
+        "description": "Analisi, studio e sviluppo di hardware,"
+      },
+      "supervision_systems": {
+        "name": "Sistemi di supervisione",
+        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+      },
+      "technical_assistance": {
+        "name": "Assistenza tecnica",
+        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+      },
+      "revamping": {
+        "name": "Revamping",
+        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+      }
+    }
   }
 }

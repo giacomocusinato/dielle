@@ -3,14 +3,14 @@
     <div class="home__brand">
       <img class="home__logo" src="~assets/icons/logo-white.svg" />
     </div>
-    <div class="home__hero">
+    <!-- <div class="home__hero">
       <h2 class="home__hero__header">
         Software e
         <br />Supervisione
       </h2>
       <p class="home__hero__sub">Disponibile per qualsiasi ulteriore informazione</p>
       <btn class="home__hero__btn">Clicca per saperne di più</btn>
-    </div>
+    </div>-->
   </section>
 </template>
 
