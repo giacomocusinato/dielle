@@ -11,5 +11,13 @@
       "partners": "Partners",
       "contacts": "Contact"
     }
+  },
+  "highlights": {
+    "items": {
+      "years": "Years of experience",
+      "team_size": "Team members",
+      "services": "Services",
+      "partners": "Partners"
+    }
   }
 }

@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.certification {
+  background-color: $bg-light;
+}
 .certification__wrapper {
   @include section-wrapper;
 
