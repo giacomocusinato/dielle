@@ -1,5 +1,10 @@
 <template>
-  <form class="contact_form" method="post">
+  <form
+    class="contact_form"
+    enctype="multipart/form-data"
+    action="http://localhost:5000/test.py"
+    method="post"
+  >
     <div class="contact_form__block">
       <label for="input-name">Il tuo nome</label>
       <input v-model="formData.name" id="input-name" placeholder="La tua email" />
@@ -17,6 +22,7 @@
       />
     </div>
     <btn type="primary" class="contact_form__btn">Invia</btn>
+    <button type="submit">Submit</button>
   </form>
 </template>
 
@@ -46,6 +52,7 @@ export default {
   > label {
     @include section-text;
 
+    color: white;
     font-weight: 300;
     text-transform: uppercase;
     display: block;
@@ -57,7 +64,9 @@ export default {
 
     width: 100%;
     padding: 8px;
-
+    color: white;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    border: none;
     &::placeholder {
       color: darken(white, 20%);
       opacity: 1; /* Firefox */

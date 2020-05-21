@@ -7,6 +7,7 @@
     <highlights></highlights>
     <about></about>
     <contact></contact>
+    <gmap></gmap>
     <foo></foo>
   </div>
 </template>
@@ -19,6 +20,7 @@ import Services from "~/components/services.vue";
 import Highlights from "~/components/highlights.vue";
 import About from "~/components/about.vue";
 import Contact from "~/components/contact.vue";
+import Map from "~/components/map.vue";
 import Footer from "~/components/footer.vue";
 
 export default {
@@ -30,6 +32,7 @@ export default {
     Highlights,
     About,
     Contact,
+    gmap: Map,
     foo: Footer
   }
 };

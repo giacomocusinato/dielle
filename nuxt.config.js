@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 export default {
   mode: "spa",
   /*
@@ -14,6 +17,13 @@ export default {
         content: process.env.npm_package_description || ""
       },
       { "http-equiv": "X-UA-Compatible", content: "IE=edge,chrome=1" }
+    ],
+    script: [
+      {
+        src:
+          "https://maps.googleapis.com/maps/api/js?key=" +
+          process.env.NUXT_ENV_MAPS_API_KEY
+      }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
