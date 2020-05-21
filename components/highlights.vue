@@ -67,24 +67,24 @@ export default {
   margin-bottom: 60px;
 
   &__square {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border: 2px solid white;
     margin: 0 auto;
-    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
   &__number {
     font-size: 49px;
     font-weight: bold;
     margin-top: 15px;
-    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
   &__text {
     height: 0;
     font-size: 13px;
     font-weight: 500;
     margin-top: 15px;
-    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
 }
 </style>
