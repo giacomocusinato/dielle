@@ -32,6 +32,8 @@ export default {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  // min-height: 180px;
 }
 .certification__main {
   text-align: right;
@@ -48,7 +50,7 @@ export default {
   max-width: 580px;
 }
 .certification__image {
-  width: 300px;
+  width: 200px;
   margin-left: 30px;
   display: none;
 
