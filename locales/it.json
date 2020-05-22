@@ -49,5 +49,31 @@
         "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
       }
     }
+  },
+  "contact": {
+    "header": "Mettiti in contatto con noi",
+    "description": "Se desideri ricevere ulteriori informazioni sui nostri servizi non esitare a contattarci.  Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.",
+    "job_header": "Lavora con noi",
+    "job_description": "Siamo sempre alla ricerca di nuovo personale! Inviaci il tuo curriculum tramite la form di contatto qui sopra e faremo il possibile per contattarti.",
+    "form": {
+      "name": {
+        "label": "Il tuo nome",
+        "placeholder": "Il tuo nome"
+      },
+
+      "email": {
+        "label": "La tua email",
+        "placeholder": "La tua email"
+      },
+      "tel": {
+        "label": "Il tuo numero di telefono",
+        "placeholder": "Numbero di telefono (opzionale)"
+      },
+      "message": {
+        "label": "Inserisci qui il tuo messaggio",
+        "placeholder": "Inserisci qui il tuo messaggio"
+      },
+      "send": "Invia"
+    }
   }
 }

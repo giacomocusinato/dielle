@@ -1,22 +1,40 @@
 <template>
   <form class="contact_form" method="post">
     <div class="contact_form__block">
-      <label for="input-name">Il tuo nome</label>
-      <input v-model="formData.name" id="input-name" placeholder="La tua email" />
+      <label for="input-name">{{ $t("contact.form.name.label") }}</label>
+      <input
+        v-model="formData.name"
+        id="input-name"
+        :placeholder="$t('contact.form.name.placeholder')"
+      />
     </div>
     <div class="contact_form__block">
-      <label for="input-email">La tua email</label>
-      <input v-model="formData.email" id="input-email" placeholder="Il tuo nome" />
+      <label for="input-email">{{ $t("contact.form.email.label") }}</label>
+      <input
+        v-model="formData.email"
+        id="input-email"
+        :placeholder="$t('contact.form.email.placeholder')"
+      />
     </div>
     <div class="contact_form__block">
-      <label for="input-message">Il tuo messaggio</label>
+      <label for="input-email">{{ $t("contact.form.tel.label") }}</label>
+      <input
+        v-model="formData.telephone_number"
+        id="input-tel"
+        :placeholder="$t('contact.form.tel.placeholder')"
+      />
+    </div>
+    <div class="contact_form__block">
+      <label for="input-message">{{ $t("contact.form.message.label") }}</label>
       <textarea
         v-model="formData.message"
         id="input-message"
-        placeholder="Inserisci qui il tuo messaggio"
+        :placeholder="$t('contact.form.message.placeholder')"
       />
     </div>
-    <btn type="primary" class="contact_form__btn">Invia</btn>
+    <btn type="primary" class="contact_form__btn">{{
+      $t("contact.form.send")
+    }}</btn>
   </form>
 </template>
 
@@ -30,9 +48,10 @@ export default {
   data: function() {
     return {
       formData: {
-        email: "",
         name: "",
-        body: ""
+        email: "",
+        phone_number: "",
+        message: ""
       }
     };
   }

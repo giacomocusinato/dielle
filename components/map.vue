@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .map {
-  height: 300px;
+  height: 345px;
 }
 .map__container,
 .contact_location__map {

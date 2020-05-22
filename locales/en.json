@@ -46,5 +46,31 @@
       },
       "revamping": { "name": "Revamping", "description": "Revamping" }
     }
+  },
+  "contact": {
+    "header": "Contact us",
+    "description": "Please contact us for any information about our services. We'll discuss the best soulutions for your needs.",
+    "job_header": "Work with us",
+    "job_description": "We're always in the lookout for new personnel! Please send us you CV using the form about and we'll try our best to get in touch with you.",
+    "form": {
+      "name": {
+        "label": "Your name",
+        "placeholder": "Your name"
+      },
+
+      "email": {
+        "label": "Your email",
+        "placeholder": "Your email"
+      },
+      "tel": {
+        "label": "Your phone number",
+        "placeholder": "Phone number (not required)"
+      },
+      "message": {
+        "label": "Type here your message",
+        "placeholder": "Type here your message"
+      },
+      "send": "Send"
+    }
   }
 }

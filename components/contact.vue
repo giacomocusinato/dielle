@@ -1,14 +1,15 @@
 <template>
   <section class="contact" data-scroll-to="contact">
     <div class="contact__wrapper">
-      <h3 class="contact__header">Mettiti in contatto con noi!</h3>
-      <spacer class="contact__spacer" />
-      <div class="contact__text">
-        Grandi o piccoli. Abbiamo qualsiasi soluzione per ogni vostra esigenza.
-        Il nostro personale qualificato risponderà ad ogni vostra domanda e vi
-        indicherà la soluzione più adeguata al vostro bisogno.
-      </div>
-      <contact-form />
+      <h3 class="contact__header">{{ $t("contact.header") }}</h3>
+      <spacer />
+      <div class="contact__text">{{ $t("contact.description") }}</div>
+
+      <contact-form class="contact__form" />
+
+      <h3 class="contact__header">{{ $t("contact.job_header") }}</h3>
+      <spacer />
+      <div class="contact__text">{{ $t("contact.job_description") }}</div>
     </div>
   </section>
 </template>
@@ -58,6 +59,9 @@ export default {
 
   text-align: center;
   padding: 0 20%;
-  margin-bottom: 30px;
+}
+
+.contact__form {
+  margin: 60px 0;
 }
 </style>
