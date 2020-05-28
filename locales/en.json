@@ -47,6 +47,9 @@
       "revamping": { "name": "Revamping", "description": "Revamping" }
     }
   },
+  "partners": {
+    "header": "Our partners"
+  },
   "contact": {
     "header": "Contact us",
     "description": "Please contact us for any information about our services. We'll discuss the best soulutions for your needs.",

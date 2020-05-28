@@ -6,6 +6,7 @@
     <services></services>
     <highlights></highlights>
     <about></about>
+    <partners></partners>
     <contact></contact>
     <gmap></gmap>
     <foo></foo>
@@ -19,6 +20,7 @@ import Certification from "~/components/certification.vue";
 import Services from "~/components/services.vue";
 import Highlights from "~/components/highlights.vue";
 import About from "~/components/about.vue";
+import Partners from "~/components/partners.vue";
 import Contact from "~/components/contact.vue";
 import Map from "~/components/map.vue";
 import Footer from "~/components/footer.vue";
@@ -31,6 +33,7 @@ export default {
     Services,
     Highlights,
     About,
+    Partners,
     Contact,
     gmap: Map,
     foo: Footer
@@ -38,5 +41,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

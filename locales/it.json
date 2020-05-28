@@ -50,9 +50,12 @@
       }
     }
   },
+  "partners": {
+    "header": "I nostri partner"
+  },
   "contact": {
     "header": "Mettiti in contatto con noi",
-    "description": "Se desideri ricevere ulteriori informazioni sui nostri servizi non esitare a contattarci.  Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.",
+    "description": "Se desideri ricevere ulteriori informazioni sui nostri servizi non esitare a contattarci. Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.",
     "job_header": "Lavora con noi",
     "job_description": "Siamo sempre alla ricerca di nuovo personale! Inviaci il tuo curriculum tramite la form di contatto qui sopra e faremo il possibile per contattarti.",
     "form": {
