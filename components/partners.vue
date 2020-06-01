@@ -1,15 +1,11 @@
 <template>
-  <section class="partners">
+  <section class="partners" data-scroll-to="partners">
     <div class="partners__wrapper">
       <h3 class="partners__header">{{ $t("partners.header") }}</h3>
       <spacer />
     </div>
     <ul class="partners__list">
-      <li
-        class="partners__list_item"
-        v-for="partner in formatted_partners"
-        :key="partner.slug"
-      >
+      <li class="partners__list_item" v-for="partner in formatted_partners" :key="partner.slug">
         <img
           class="partners__logo"
           :src="require(`../assets/icons/partners/${partner.slug}.svg`)"

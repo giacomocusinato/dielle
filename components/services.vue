@@ -1,5 +1,5 @@
 <template>
-  <section class="services">
+  <section class="services" data-scroll-to="services">
     <div class="services__wrapper">
       <h3 class="services__header">{{ $t("services.header") }}</h3>
       <spacer />

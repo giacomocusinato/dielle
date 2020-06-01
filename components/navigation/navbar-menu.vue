@@ -2,39 +2,49 @@
   <nav>
     <ul class="navbar-menu" :class="{ 'navbar-menu--sticky': isNavbarSticky }">
       <li class="navbar-menu__item">
-        <a data-ref="home" v-on:click="onMenuItemClick">{{
+        <a data-ref="home" v-on:click="onMenuItemClick">
+          {{
           $t("navbar.menu.home")
-        }}</a>
+          }}
+        </a>
       </li>
       <span class="navbar-menu__bull">&bull;</span>
       <li class="navbar-menu__item">
-        <a data-ref="about" v-on:click="onMenuItemClick">{{
-          $t("navbar.menu.about")
-        }}</a>
-      </li>
-      <span class="navbar-menu__bull">&bull;</span>
-      <li class="navbar-menu__item">
-        <a data-ref="home" v-on:click="onMenuItemClick">{{
+        <a data-ref="services" v-on:click="onMenuItemClick">
+          {{
           $t("navbar.menu.services")
-        }}</a>
+          }}
+        </a>
       </li>
-      <span class="navbar-menu__bull">&bull;</span>
+      <!-- <span class="navbar-menu__bull">&bull;</span>
       <li class="navbar-menu__item">
         <a data-ref="home" v-on:click="onMenuItemClick">{{
           $t("navbar.menu.team")
         }}</a>
+      </li>-->
+      <span class="navbar-menu__bull">&bull;</span>
+      <li class="navbar-menu__item">
+        <a data-ref="about" v-on:click="onMenuItemClick">
+          {{
+          $t("navbar.menu.about")
+          }}
+        </a>
       </li>
       <span class="navbar-menu__bull">&bull;</span>
       <li class="navbar-menu__item">
-        <a data-ref="home" v-on:click="onMenuItemClick">{{
+        <a data-ref="partners" v-on:click="onMenuItemClick">
+          {{
           $t("navbar.menu.partners")
-        }}</a>
+          }}
+        </a>
       </li>
       <span class="navbar-menu__bull">&bull;</span>
       <li class="navbar-menu__item">
-        <a data-ref="home" v-on:click="onMenuItemClick">{{
+        <a data-ref="contact" v-on:click="onMenuItemClick">
+          {{
           $t("navbar.menu.contacts")
-        }}</a>
+          }}
+        </a>
       </li>
     </ul>
   </nav>
@@ -47,10 +57,14 @@ export default {
     onMenuItemClick(e) {
       const ref = e.target.dataset.ref;
       const el = document.querySelectorAll(`[data-scroll-to='${ref}']`)[0];
-      window.scrollTo({
-        top: window.pageYOffset + el.getBoundingClientRect().top,
-        behavior: "smooth"
-      });
+
+      if (el) {
+        const top = window.pageYOffset + el.getBoundingClientRect().top - 70;
+        window.scrollTo({
+          top: ref === "home" ? 0 : top,
+          behavior: "smooth"
+        });
+      }
     }
   }
 };
