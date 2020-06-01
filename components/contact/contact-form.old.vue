@@ -21,7 +21,7 @@
         placeholder="Inserisci qui il tuo messaggio"
       />
     </div>
-    <btn type="primary" class="contact_form__btn">Invia</btn>
+    <btn theme="primary" class="contact_form__btn">Invia</btn>
     <button type="submit">Submit</button>
   </form>
 </template>

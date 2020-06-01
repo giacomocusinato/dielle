@@ -10,6 +10,12 @@
       <h3 class="contact__header">{{ $t("contact.job_header") }}</h3>
       <spacer />
       <div class="contact__text">{{ $t("contact.job_description") }}</div>
+      <btn
+        class="contact__btn"
+        theme="primary"
+        btnType="link"
+        href="mailto:info@dielleimpianti.it"
+      >Invia il tuo CV</btn>
     </div>
   </section>
 </template>
@@ -63,5 +69,9 @@ export default {
 
 .contact__form {
   margin: 60px 0;
+}
+
+.contact__btn {
+  margin: 30px auto 0 auto;
 }
 </style>

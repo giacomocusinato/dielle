@@ -32,9 +32,11 @@
         :placeholder="$t('contact.form.message.placeholder')"
       />
     </div>
-    <btn type="primary" class="contact_form__btn">{{
+    <btn theme="primary" class="contact_form__btn">
+      {{
       $t("contact.form.send")
-    }}</btn>
+      }}
+    </btn>
   </form>
 </template>
 

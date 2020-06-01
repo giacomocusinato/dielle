@@ -16,7 +16,7 @@
           <contact-form />
         </card>
       </div>
-      <btn type="primary" class="contact__btn">Inviaci una email</btn>
+      <btn theme="primary" class="contact__btn">Inviaci una email</btn>
     </div>
   </section>
 </template>

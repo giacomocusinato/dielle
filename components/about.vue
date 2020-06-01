@@ -39,7 +39,7 @@
           </p>
         </div>
       </div>
-      <img class="about__image" src="~assets/images/robot.png" />
+      <!-- <img class="about__image" src="~assets/images/robot.png" /> -->
     </div>
   </section>
 </template>
@@ -55,6 +55,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.about {
+}
 .about__wrapper {
   @include section-wrapper;
 

@@ -7,13 +7,22 @@
           <h4 class="footer__entry__header">Contatti</h4>
           <div class="footer__entry__text">
             Via Galileo Galilei 1, Galliera Veneta (PD) 35015
-            <br />049548291
-            <br />info@dielleimpianti.it
+            <br />Tel: 049 9440586
+            <br />Fax: 049 9443414
+            <br />Mail:
+            <a
+              href="mailto:info@dielleimpianti.it"
+              alt="Contattaci via mail"
+            >info@dielleimpianti.it</a>
+            <br />Partita IVA: 02474770282
           </div>
         </div>
         <div class="footer__entry">
           <h4 class="footer__entry__header">Lavora con noi</h4>
-          <div class="footer__entry__text">Clicca qui per inviare il tuo curriculum</div>
+          <div class="footer__entry__text">
+            Clicca
+            <a href="mailto:info@dielleimpianti.it" alt="Inviaci il curriculum">qui</a> per inviare il tuo curriculum
+          </div>
         </div>
       </div>
     </div>
@@ -60,6 +69,12 @@ export default {};
 
     color: white;
     line-height: 18px;
+    text-decoration: none;
+
+    a {
+      color: white;
+      // text-decoration: none;
+    }
   }
 }
 </style>
