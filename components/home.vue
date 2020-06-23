@@ -4,12 +4,11 @@
       <img class="home__logo" src="~assets/icons/logo-white.svg" />
     </div>
     <div class="home__hero">
-      <h2 class="home__hero__header">
-        Software e
-        <br />Supervisione
-      </h2>
-      <p class="home__hero__sub">Disponibile per qualsiasi ulteriore informazione</p>
-      <btn class="home__hero__btn">Clicca per saperne di più</btn>
+      <h2 class="home__hero__header">Automazione Industriale</h2>
+      <p
+        class="home__hero__sub"
+      >Progettiamo quadri elettrici e software per l'automazione industriale da più di 30 anni</p>
+      <btn class="home__hero__btn" @click.native="onShowMoreClick">Scopri di più</btn>
     </div>
   </section>
 </template>
@@ -26,6 +25,8 @@ export default {
       const el = document.querySelectorAll(
         `[data-scroll-to='certification']`
       )[0];
+
+      console.log(document.querySelectorAll(`[data-scroll-to]`));
 
       if (el) {
         const top = window.scrollTo({
@@ -47,28 +48,36 @@ export default {
   width: 100vw;
   padding-top: $navbar-height !important;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.home__logo {
+.home__brand {
   width: 80%;
-  margin: 60px auto 0 auto;
-  display: block;
+  margin: 0px auto 0 auto;
 
-  @include lg {
+  @include md {
     width: 300px;
   }
+  @include lg {
+    width: 40vh;
+  }
+}
+.home__logo {
+  width: 100%;
+  display: block;
 }
 
 .home__hero {
   color: white;
-  margin: 60px;
   text-align: center;
-  width: 350px;
-  margin: 120px auto;
-  // position: absolute;
-  // bottom: 30px;
+  align-self: flex-end;
+  margin: 0 auto 0px auto;
+
   &__header {
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 400;
     text-transform: uppercase;
   }
@@ -78,13 +87,18 @@ export default {
     font-weight: 400;
   }
   &__btn {
-    margin-top: 10px;
-    margin: 10px auto;
+    margin: 15px auto 0 auto;
+  }
+
+  @include md {
+    width: 500px;
   }
 
   @include lg {
+    width: 600px;
+
     &__header {
-      font-size: 45px;
+      font-size: 35px;
     }
     &__sub {
       font-size: 20px;

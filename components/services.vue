@@ -88,12 +88,11 @@ export default {
   flex-direction: column;
   justify-content: space-evenly;
 }
-.services__list__item {
-}
-
 .services__image {
   margin: auto 45px;
-  width: 240px;
+  // width: 240px;
+  width: 0;
+  margin: 0;
   flex: initial;
 }
 </style>

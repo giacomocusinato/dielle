@@ -50,7 +50,7 @@ export default {
 .service-item__square {
   flex: initial;
   height: 45px;
-  width: 45px;
+  // width: 45px;
   border: 1px solid $pacific-blue;
 }
 </style>
