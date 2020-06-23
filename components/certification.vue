@@ -1,5 +1,5 @@
 <template>
-  <section class="certification">
+  <section class="certification" data-scroll-to="certification">
     <div class="certification__wrapper">
       <img class="certification__image" src="~assets/images/certification.png" />
       <div class="certification__main">

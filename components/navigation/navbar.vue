@@ -1,7 +1,13 @@
 <template>
   <div class="navbar" :class="{ 'navbar--sticky': isSticky }">
     <div class="navbar__wrapper">
-      <h1 class="navbar__title">{{ $t("globals.company_name") }}</h1>
+      <h1 class="navbar__title">
+        <a
+          class="navbar__title__link"
+          :class="{ 'navbar__title__link--active': isSticky }"
+          @click="onHomeClick"
+        >{{ $t("globals.company_name") }}</a>
+      </h1>
       <navbar-menu :is-navbar-sticky="isSticky"></navbar-menu>
     </div>
   </div>
@@ -28,6 +34,11 @@ export default {
       if (scrollTop <= 100 && this.isSticky) {
         this.isSticky = false;
         this.$el.classList.remove("navbar--sticky");
+      }
+    },
+    onHomeClick() {
+      if (this.isSticky) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     }
   },
@@ -56,6 +67,9 @@ export default {
   &__title {
     color: white;
     text-transform: uppercase;
+  }
+  &__title__link--active {
+    cursor: pointer;
   }
 
   &--sticky {

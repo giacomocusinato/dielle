@@ -56,14 +56,15 @@ export default {
   methods: {
     onMenuItemClick(e) {
       const ref = e.target.dataset.ref;
-      const el = document.querySelectorAll(`[data-scroll-to='${ref}']`)[0];
 
+      if (ref === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      const el = document.querySelectorAll(`[data-scroll-to='${ref}']`)[0];
       if (el) {
         const top = window.pageYOffset + el.getBoundingClientRect().top - 70;
-        window.scrollTo({
-          top: ref === "home" ? 0 : top,
-          behavior: "smooth"
-        });
+        window.scrollTo({ top, behavior: "smooth" });
       }
     }
   }

@@ -3,14 +3,14 @@
     <div class="home__brand">
       <img class="home__logo" src="~assets/icons/logo-white.svg" />
     </div>
-    <!-- <div class="home__hero">
+    <div class="home__hero">
       <h2 class="home__hero__header">
         Software e
         <br />Supervisione
       </h2>
       <p class="home__hero__sub">Disponibile per qualsiasi ulteriore informazione</p>
       <btn class="home__hero__btn">Clicca per saperne di più</btn>
-    </div>-->
+    </div>
   </section>
 </template>
 
@@ -20,6 +20,20 @@ import Btn from "./common/btn.vue";
 export default {
   components: {
     Btn
+  },
+  methods: {
+    onShowMoreClick(e) {
+      const el = document.querySelectorAll(
+        `[data-scroll-to='certification']`
+      )[0];
+
+      if (el) {
+        const top = window.scrollTo({
+          top: window.pageYOffset + el.getBoundingClientRect().top - 70,
+          behavior: "smooth"
+        });
+      }
+    }
   }
 };
 </script>
