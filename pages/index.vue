@@ -4,7 +4,7 @@
     <home></home>
     <certification></certification>
     <!-- <services></services> -->
-    <!-- <highlights></highlights> -->
+    <highlights></highlights>
     <about></about>
     <partners></partners>
     <contact></contact>

@@ -3,7 +3,7 @@
     <div class="highlights__wrapper">
       <div class="highlights__item">
         <div class="highlights__item__square" />
-        <div class="highlights__item__number">30</div>
+        <div class="highlights__item__number">30+</div>
         <div class="highlights__item__text">{{ $t("highlights.items.years") }}</div>
       </div>
       <div class="highlights__item">
@@ -18,7 +18,7 @@
       </div>
       <div class="highlights__item">
         <div class="highlights__item__square" />
-        <div class="highlights__item__number">10</div>
+        <div class="highlights__item__number">10+</div>
         <div class="highlights__item__text">{{ $t("highlights.items.partners") }}</div>
       </div>
     </div>
@@ -50,21 +50,21 @@ export default {
     right: 0;
     position: absolute;
     z-index: -1;
+    filter: brightness(80%);
   }
 }
 .highlights__wrapper {
-  @include section-wrapper;
-
+  // @include section-wrapper;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   height: 100%;
 }
 .highlights__item {
   text-align: center;
   color: white;
-  flex: 1;
-  margin-bottom: 60px;
+  flex: 50%;
 
   &__square {
     width: 50px;
@@ -85,6 +85,10 @@ export default {
     font-weight: 500;
     margin-top: 15px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  @include md {
+    flex: 1;
   }
 }
 </style>
