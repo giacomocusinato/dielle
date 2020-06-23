@@ -6,7 +6,7 @@
     <!-- <services></services> -->
     <!-- <highlights></highlights> -->
     <about></about>
-    <!-- <partners></partners> -->
+    <partners></partners>
     <contact></contact>
     <gmap></gmap>
     <foo></foo>

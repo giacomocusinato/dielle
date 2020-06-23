@@ -11,7 +11,7 @@ $navbar-height: 60px;
 @mixin section-wrapper {
   padding: 60px;
   margin: 0 auto;
-  background-color: rgb(random() * 100, random() * 100, random() * 100);
+  // background-color: rgb(random() * 100, random() * 100, random() * 100);
 
   @include lg {
     padding: 60px 120px;
@@ -20,6 +20,11 @@ $navbar-height: 60px;
 
   @include xl {
     padding: 60px 120px;
+    max-width: initial;
+  }
+
+  @include xxl {
+    padding: 60px 600px;
     max-width: initial;
   }
 }

@@ -76,5 +76,6 @@ export default {
 .partners__logo {
   height: 50px;
   margin: 30px 30px;
+  max-width: calc(100% - 60px);
 }
 </style>
