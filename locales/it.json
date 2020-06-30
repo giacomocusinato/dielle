@@ -22,31 +22,31 @@
   },
   "services": {
     "header": "I nostri servizi",
-    "description": "Un'azienda specializzata nella costruzione di quadri elettrici di comando, cablaggi bordomacchina ed automazioni industriali anche della massima sofisticazione.",
+    "description": "Siamo specializzati nella costruzione di quadri elettrici di comando, cablaggi bordomacchina e software per l'automazione industriale.",
     "items": {
       "design": {
         "name": "Progettazione",
-        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+        "description": "Affianchiamo fin da subito tutte le figure tecniche convolte nel progetto per eseguire studi ed analisi sulla progettazione del sistema di automazione così da garantire la massima qualità."
       },
       "electrical_panels": {
         "name": "Quadri elettrici",
-        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+        "description": "Siamo specializzati nella realizzazione di quadri elettrici ed impianti bodomacchina su molteplici settori, perfezionando da più di 30 anni le nostre tecniche e processi produttivi."
       },
       "industrial_software": {
         "name": "Software Industriale",
-        "description": "Analisi, studio e sviluppo di hardware,"
+        "description": "Progettiamo e sviluppiamo software industriali (PLC, HMI, SCADA) garantendo alta qualità tramite specifiche analisi per ogni singola applicazione."
       },
       "supervision_systems": {
         "name": "Sistemi di supervisione",
-        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+        "description": "Implementiamo sistemi SCADA per la supervisione e l'acquisizione di dati che facilitano il monitoraggio e la gestione degli impianti."
       },
       "technical_assistance": {
         "name": "Assistenza tecnica",
-        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+        "description": "Ci occupiamo di tutte le fasi di vita di un impianto garantendo supporto, manutenzione ed aggiornamento degli impianti e degli applicativi software."
       },
       "revamping": {
         "name": "Revamping",
-        "description": "Analisi, studio e sviluppo di hardware, realizzazione di progettazione e documentazione, impianti di distribuzione, quadri elettrici ed impianti bordomacchina eseguiti in conformità alle normative vigenti"
+        "description": "Offriamo interventi di ammoderdamento di macchine esistenti tramite attente analisi, verifiche tecniche e successivi miglioramenti dei processi produttivi prolungando ed ottimizzando il funzionamento dell'impianto."
       }
     }
   },

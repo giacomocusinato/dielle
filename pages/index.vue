@@ -3,7 +3,7 @@
     <navbar></navbar>
     <home></home>
     <certification></certification>
-    <!-- <services></services> -->
+    <services></services>
     <highlights></highlights>
     <about></about>
     <partners></partners>

@@ -78,15 +78,25 @@ export default {
   text-align: center;
 }
 .services__content {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   min-height: 480px;
+  padding-top: 30px;
+
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+  }
 }
 .services__list {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  display: block;
+
+  @include md {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 .services__image {
   margin: auto 45px;

@@ -21,8 +21,9 @@ export default {
 
 <style lang="scss" scoped>
 .service-item {
-  display: flex;
   // align-items: center;
+  display: flex;
+  margin: 15px 0;
 
   &--right {
     justify-content: flex-end;
@@ -32,12 +33,19 @@ export default {
     justify-content: flex-start;
     text-align: left;
   }
+
+  @include md {
+    margin: 0;
+  }
 }
 .service-item__text {
   margin: 0 15px;
-  flex: auto;
   max-width: calc(100% - 90px);
-  height: 0;
+
+  @include md {
+    flex: auto;
+    height: 0;
+  }
 }
 .service-item__header {
   @include small-header;
@@ -52,5 +60,9 @@ export default {
   height: 45px;
   // width: 45px;
   border: 1px solid $pacific-blue;
+
+  @include md {
+    display: inline-block;
+  }
 }
 </style>
