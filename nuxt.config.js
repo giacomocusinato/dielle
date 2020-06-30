@@ -7,14 +7,15 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Dielle - Automazioni Industriali",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
+        content:
+          "Dielle s.r.l. è un'azienda specializzata nella realizzazione di quadri elettrici, impianti bordomacchina e software per l'automazione industriale."
       },
       { "http-equiv": "X-UA-Compatible", content: "IE=edge,chrome=1" }
     ],
