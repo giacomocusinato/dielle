@@ -40,11 +40,11 @@ export default {
 }
 .service-item__text {
   margin: 0 15px;
-  max-width: calc(100% - 90px);
 
   @include md {
     flex: auto;
     height: 0;
+    max-width: calc(100% - 90px);
   }
 }
 .service-item__header {
