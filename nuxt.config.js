@@ -35,6 +35,9 @@ export default {
       }
     ]
   },
+  router: {
+    base: "/development/"
+  },
   /*
    ** Customize the progress-bar color
    */
@@ -74,7 +77,8 @@ export default {
         lazy: true,
         langDir: "locales/"
       }
-    ]
+    ],
+    "@nuxt/http"
   ],
   /*
    ** Build configuration

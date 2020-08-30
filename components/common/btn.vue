@@ -1,16 +1,32 @@
 <template>
   <div class="btn" :class="getClass()">
     <div class="btn__button btn__inner" v-if="btnType == 'button'" :role="role">
-      <slot>Click</slot>
+      <div class="btn__button__content">
+        <div><slot>Click</slot></div>
+      </div>
+      <div class="btn__button__loader">
+        <loader v-if="loading"></loader>
+      </div>
     </div>
-    <a class="btn__link btn__inner" v-if="btnType == 'link'" :href="href" alt="alt" target="_blank">
+    <a
+      class="btn__link btn__inner"
+      v-if="btnType == 'link'"
+      :href="href"
+      alt="alt"
+      target="_blank"
+    >
       <slot>Click</slot>
     </a>
   </div>
 </template>
 
 <script>
+import Loader from "./loader.vue";
+
 export default {
+  components: {
+    Loader
+  },
   props: {
     btnType: {
       type: String,
@@ -32,13 +48,18 @@ export default {
     role: {
       type: String,
       default: "button"
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
     getClass() {
       return {
         "btn--primary": this.theme === "primary",
-        "btn--default": this.theme === "default"
+        "btn--default": this.theme === "default",
+        "btn--loading": this.loading
       };
     }
   }
@@ -51,7 +72,7 @@ export default {
   width: fit-content;
   cursor: pointer;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s ease 0s;
+  transition: background-color 0.5s ease 0s;
 
   &:hover {
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
@@ -80,14 +101,31 @@ export default {
     }
   }
 
+  &--loading {
+    .btn__button__content {
+      visibility: hidden;
+    }
+    .btn__button__loading {
+      display: block;
+    }
+  }
+
   .btn__inner {
     display: block;
     padding: 15px;
+    position: relative;
   }
 
   .btn__link {
     color: inherit;
     text-decoration: inherit;
+  }
+
+  .btn__button__loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 </style>
