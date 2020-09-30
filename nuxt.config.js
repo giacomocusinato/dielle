@@ -17,6 +17,10 @@ export default {
         content:
           "Dielle s.r.l. è un'azienda specializzata nella realizzazione di quadri elettrici, impianti bordomacchina e software per l'automazione industriale."
       },
+      {
+        name: 'keywords',
+        content: 'Automazione industriale, Cablaggio quadri elettrici, Costruzione quadri elettrici, Automazione impianti, Manutenzione impianti, Software impianti industriali, Progettazione elettrica, Schemi elettrici, Impianti bordomacchina, Cablaggi impianti industriali, Programmazione plc, Omron, Siemens, Allen Bradley, Rockwell, Ge Power, Componenti elettrici, Impianti per prodotti alimentari, Impianti per materie plastiche, Impianti per la lavorazione del marmo, Telemecanique, Schneider, Zanardo, RIttal, Quadritalia, Moeller, Italweber, Phoenix, Magrini Galileo, Weidmüller, Inverter, Plc, Gefran, Siei, Siemens Vdo, Typact, Ascon, Yaskawa, UniOp, Technoeletric, Wago, Super Flash, Automa, WinCC, Profibus, Ethernet, Simatic, S7'
+      },
       { "http-equiv": "X-UA-Compatible", content: "IE=edge,chrome=1" }
     ],
     script: [
