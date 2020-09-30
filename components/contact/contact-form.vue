@@ -69,7 +69,7 @@ export default {
         phone_number: "",
         message: "",
       },
-      formState: "error",
+      formState: null,
     };
   },
   methods: {
