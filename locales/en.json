@@ -44,7 +44,10 @@
         "name": "Technical support",
         "description": "Technical support"
       },
-      "revamping": { "name": "Revamping", "description": "Revamping" }
+      "revamping": {
+        "name": "Revamping",
+        "description": "Revamping"
+      }
     }
   },
   "partners": {
@@ -60,7 +63,6 @@
         "label": "Your name",
         "placeholder": "Your name"
       },
-
       "email": {
         "label": "Your email",
         "placeholder": "Your email"
@@ -73,7 +75,9 @@
         "label": "Type here your message",
         "placeholder": "Type here your message"
       },
-      "send": "Send"
+      "send": "Send",
+      "error": "An error has occurred. Please try again later or send us an email at ",
+      "success": "Message succesfully sent!"
     }
   }
 }

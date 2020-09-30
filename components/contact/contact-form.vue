@@ -19,7 +19,7 @@
     <div class="contact_form__block">
       <label for="input-email">{{ $t("contact.form.tel.label") }}</label>
       <input
-        v-model="formData.telephone_number"
+        v-model="formData.phone_number"
         id="input-tel"
         :placeholder="$t('contact.form.tel.placeholder')"
       />
@@ -37,14 +37,18 @@
         theme="primary"
         class="contact_form__btn"
         @click.native="onSubmit"
-        :loading="formLoading"
-        v-if="!formSuccess"
+        :loading="formState === 'loading'"
       >
         {{ $t("contact.form.send") }}
       </btn>
-      <p v-if="formSuccess">Your email was succesfully sent.</p>
-      <p v-if="formError">
-        Sorry, an error has occurred while sending the email.
+      <p v-if="formState === 'success'">
+        {{ $t("contact.form.success") }}
+      </p>
+      <p v-if="formState === 'error'">
+        {{ $t("contact.form.error") }}
+        <a href="mailto:info@dielleimpianti.it">
+          mailto:info@dielleimpianti.it
+        </a>
       </p>
     </div>
   </form>
@@ -55,44 +59,31 @@ import Btn from "../common/btn.vue";
 
 export default {
   components: {
-    Btn
+    Btn,
   },
-  data: function() {
+  data: function () {
     return {
       formData: {
         name: "",
         email: "",
         phone_number: "",
-        message: ""
+        message: "",
       },
-      formLoading: false,
-      formSuccess: false,
-      formError: false
+      formState: "error",
     };
   },
   methods: {
     async onSubmit(e) {
       console.log(this.formData);
-      this.formLoading = true;
+      this.formState = "loading";
       try {
-        await new Promise(resolve => setTimeout(resolve, 2000));
         const res = await this.$http.post("/cgi-bin/mailer.php", this.formData);
-        console.log(res);
-        this.formLoading = false;
-        this.formSuccess = true;
-        this.formError = false;
-        console.log("success");
+        this.formState = "success";
       } catch (err) {
-        this.formLoading = false;
-        this.formError = true;
-        this.formSuccess = false;
-        console.log("fail");
+        this.formState = "error";
       }
-    }
+    },
   },
-  mounted() {
-    // this.onSubmit = this.onSubmit.bind(this);
-  }
 };
 </script>
 
@@ -129,17 +120,25 @@ export default {
   > textarea {
     height: 200px;
   }
+}
 
-  .contact_form__submit {
-    display: flex;
+.contact_form__submit {
+  display: flex;
+  align-items: center;
 
-    p {
-      @include section-text;
-    }
+  p,
+  p > a {
+    @include section-text;
+    font-weight: bold;
   }
-
-  .contact_form__btn {
-    margin-right: 30px;
+  p > a {
+    @include section-text;
+    font-weight: bold;
+    color: #797979;
   }
+}
+
+.contact_form__btn {
+  margin-right: 30px;
 }
 </style>

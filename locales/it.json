@@ -61,7 +61,6 @@
         "label": "Il tuo nome",
         "placeholder": "Il tuo nome"
       },
-
       "email": {
         "label": "La tua email",
         "placeholder": "La tua email"
@@ -74,7 +73,9 @@
         "label": "Inserisci qui il tuo messaggio",
         "placeholder": "Inserisci qui il tuo messaggio"
       },
-      "send": "Invia"
+      "send": "Invia",
+      "error": "Si è verificato un errore. Riprova più tardi o scrivici a ",
+      "success": "Messaggio inviato con successo."
     },
     "job_header": "Lavora con noi",
     "job_description": "Siamo sempre alla ricerca di nuovo personale! Inviaci il tuo curriculum e faremo il possibile per contattarti."

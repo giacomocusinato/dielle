@@ -35,9 +35,6 @@ export default {
       }
     ]
   },
-  router: {
-    base: "/development/"
-  },
   /*
    ** Customize the progress-bar color
    */
@@ -87,10 +84,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   },
-  server: {
-    port: 3000,
-    host: "0.0.0.0"
-  }
 };
