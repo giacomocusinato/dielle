@@ -5,7 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        avenir: ['Avenir Next Condensed', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Fira Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
