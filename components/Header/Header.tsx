@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
+import { LanguagePicker } from '../LanguagePicker';
 
-const HeaderContent: React.FC<{ isSticky: boolean }> = () => (
+const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => (
   <>
     <div className="container mx-auto w-full h-full flex justify-between items-center text-black" >
       <h1 className="font-avenir text-2xl uppercase font-semibold tracking-[2px]">Dielle</h1>
@@ -11,10 +12,7 @@ const HeaderContent: React.FC<{ isSticky: boolean }> = () => (
         <li><a href="" className="text-lg text-semibold">Su di noi</a></li>
         <li><a href="" className="text-lg text-semibold">Partners</a></li>
       </ul>
-      <select name="language">
-        <option value="it">IT</option>
-        <option value="en">EN</option>
-      </select>
+      {!isSticky ? <LanguagePicker /> : <div />}  {/* TODO: add right content */}
     </div>
   </>
 )
