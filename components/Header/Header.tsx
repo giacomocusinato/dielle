@@ -7,10 +7,10 @@ const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => (
     <div className="container mx-auto w-full h-full flex justify-between items-center text-black" >
       <h1 className="font-avenir text-2xl uppercase font-semibold tracking-[2px]">Dielle</h1>
       <ul className="flex space-x-4">
-        <li><a href="" className="text-lg text-semibold">Servizi</a></li>
-        <li><a href="" className="text-lg text-semibold">Settori</a></li>
-        <li><a href="" className="text-lg text-semibold">Su di noi</a></li>
-        <li><a href="" className="text-lg text-semibold">Partners</a></li>
+        <li><a href="" className="text-lg text-semibold hover:text-dielle focus:text-dielle">Servizi</a></li>
+        <li><a href="" className="text-lg text-semibold hover:text-dielle focus:text-dielle">Settori</a></li>
+        <li><a href="" className="text-lg text-semibold hover:text-dielle focus:text-dielle">Su di noi</a></li>
+        <li><a href="" className="text-lg text-semibold hover:text-dielle focus:text-dielle">Partners</a></li>
       </ul>
       {!isSticky ? <LanguagePicker /> : <div />}  {/* TODO: add right content */}
     </div>

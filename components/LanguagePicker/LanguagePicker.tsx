@@ -34,7 +34,7 @@ export const LanguagePicker = () => {
           )}>
             <img src={selectedLang?.flag} className="mr-2 w-5 h-5" />
             <span className="font-medium text-xl uppercase w-[25px]">{selectedLang?.locale}</span>
-            <ChevronDownIcon className="w-5 h-5 text-xl uppercase" />
+            <ChevronDownIcon className="w-5 h-5 text-dielle text-xl uppercase" />
           </Listbox.Button>
           <Transition
             className="absolute w-full bg-white box-border"
