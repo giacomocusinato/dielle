@@ -1,3 +1,17 @@
 {
-  "showMore": "Show more"
+  "showMore": "Show more",
+  "services": {
+    "title1": "Services",
+    "title2": "and technologies",
+    "panels": "Electrical panels",
+    "panelsDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "software": "Industrial software",
+    "softwareDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "design": "Design",
+    "designDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "onboard": "Onboard installation",
+    "onboardDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "robotic": "Robotic",
+    "roboticDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta."
+  }
 }

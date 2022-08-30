@@ -5,6 +5,7 @@ import { PlusIcon } from '@heroicons/react/solid';
 import { Head } from '../../components/Head';
 import { Header } from '../../components/Header';
 import { HeroLogo } from '../../components/HeroLogo';
+import { SectionServices } from '../../components/SectionServices';
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
 
 const Home: NextPage = () => {
@@ -45,6 +46,8 @@ const Home: NextPage = () => {
           {t("home:showMore")}
         </a>}
       </section>
+
+      <SectionServices />
     </>
   )
 }

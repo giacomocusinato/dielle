@@ -1,3 +1,17 @@
 {
-  "showMore": "Mostra altro"
+  "showMore": "Mostra altro",
+  "services": {
+    "title1": "Servizi",
+    "title2": "e tecnologie",
+    "panels": "Pannelli elettrici",
+    "panelsDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "software": "Software industriale",
+    "softwareDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "design": "Progettazione",
+    "designDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "onboard": "Impianti bordomacchina",
+    "onboardDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "robotic": "Robotica",
+    "roboticDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta."
+  }
 }
