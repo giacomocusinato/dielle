@@ -13,6 +13,9 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        'dielle': '#00A19A',
+      },
       fontFamily: {
         avenir: ['Avenir Next Condensed', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
         sans: ['Fira Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
