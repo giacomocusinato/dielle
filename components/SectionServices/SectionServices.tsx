@@ -33,7 +33,7 @@ export const SectionServices = () => {
         <h2 className="mb-16 text-4xl text-medium sm:text-center">
           <span className="text-dielle">{t('home:services.title1')}</span> {t('services.title2')}
         </h2>
-        <div className="mt-8 z-10 grid gap-6 2xl:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 grid-rows-4">
+        <div className="mt-8 z-10 grid gap-6 2xl:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-4">
           <ServiceItem
             title={t('home:services.design')}
             description={t('home:services.designDesc')} />
