@@ -6,6 +6,7 @@ import { Head } from '../../components/Head';
 import { Header } from '../../components/Header';
 import { HeroLogo } from '../../components/HeroLogo';
 import { SectionServices } from '../../components/SectionServices';
+import { SectionSectors } from '../../components/SectionSectors/SectionSectors';
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
 
 const Home: NextPage = () => {
@@ -49,8 +50,8 @@ const Home: NextPage = () => {
 
       <SectionServices />
 
-      <section className="relative">
-        <div className="container pt-20 lg:px-[180px] xl:px-[240px]">
+      <section>
+        <div className="container py-20 lg:px-[180px] xl:px-[240px]">
           <h2 className="mb-16 text-4xl text-medium sm:text-center">
             Su di <span className="text-dielle">noi</span>
           </h2>
@@ -82,7 +83,9 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      )
+
+      <SectionSectors />
+
     </>
   )
 }

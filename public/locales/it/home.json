@@ -1,8 +1,8 @@
 {
   "showMore": "Mostra altro",
   "services": {
-    "title1": "Servizi",
-    "title2": "e tecnologie",
+    "title1": "Le nostre",
+    "title2": "soluzioni",
     "panels": "Pannelli elettrici",
     "panelsDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
     "software": "Software industriale",
@@ -13,5 +13,19 @@
     "onboardDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
     "robotic": "Robotica",
     "roboticDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta."
+  },
+  "industries": {
+    "title1": "I nostri",
+    "title2": "settori",
+    "food": "Alimentare",
+    "foodDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "packaging": "Imballaggio",
+    "packagingDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "boat": "Boat lifting",
+    "boatDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "marble": "Lavorazione del marmo",
+    "marbleDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "metal": "Metalmeccanico",
+    "metalDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta."
   }
 }

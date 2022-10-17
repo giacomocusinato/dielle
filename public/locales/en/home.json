@@ -13,5 +13,19 @@
     "onboardDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
     "robotic": "Robotic",
     "roboticDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta."
+  },
+  "industries": {
+    "title1": "Our",
+    "title2": "industries",
+    "food": "Food and beverages",
+    "foodDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "packaging": "Packaging",
+    "packagingDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "boat": "Boat lifting",
+    "boatDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "marble": "Marble processing",
+    "marbleDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "metal": "Metalworking",
+    "metalDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta."
   }
 }
