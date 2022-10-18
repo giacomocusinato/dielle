@@ -7,6 +7,7 @@ import { Header } from '../../components/Header';
 import { HeroLogo } from '../../components/HeroLogo';
 import { SectionServices } from '../../components/SectionServices';
 import { SectionSectors } from '../../components/SectionSectors/SectionSectors';
+import { Partners } from '../../components/Partners/Partners';
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
 
 const Home: NextPage = () => {
@@ -86,6 +87,7 @@ const Home: NextPage = () => {
 
       <SectionSectors />
 
+      <Partners />
     </>
   )
 }
