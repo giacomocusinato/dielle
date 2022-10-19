@@ -23,7 +23,7 @@ export const Solutions = () => {
   const { t } = useTranslation(['home']);
 
   return (
-    <section className="relative" >
+    <section id="solutions" className="relative" >
       <img src="/cables.jpg" className={classNames(
         'absolute -z-10 w-full',
         'hidden sm:block',

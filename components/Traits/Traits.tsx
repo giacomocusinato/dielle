@@ -5,7 +5,7 @@ export const Traits = () => {
   const { t } = useTranslation(['common']);
 
   return (
-    <section>
+    <section id="traits">
       <div className="container py-20 lg:px-[180px] xl:px-[240px]">
         <h2 className="mb-16 text-4xl text-medium sm:text-center">
           Su di <span className="text-dielle">noi</span>

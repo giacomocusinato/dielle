@@ -20,7 +20,7 @@ export const Partners = () => {
   const { t } = useTranslation(['home']);
 
   return (
-    <section>
+    <section id="partners">
       <div className="container py-20">
         <h2 className="mb-16 text-4xl text-medium sm:text-center">
           {t('partners.title1')} <span className="text-dielle">{t('home:partners.title2')}</span>

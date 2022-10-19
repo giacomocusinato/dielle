@@ -10,7 +10,7 @@ export const Hero = () => {
 
   return (
     <>
-      <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
         <video className="absolute min-w-full min-h-full object-cover -z-50 brightness-50" autoPlay muted loop>
           <source src="/hero.mp4" type="video/mp4" />
         </video>
