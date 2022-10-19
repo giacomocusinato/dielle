@@ -2,12 +2,12 @@ import React from 'react'
 import classNames from 'classnames';
 import { useTranslation } from 'next-i18next';
 
-type ServiceCardProps = {
+type SolutionItemProps = {
   title: string;
   description: string;
 };
 
-export const ServiceItem: React.FC<ServiceCardProps> = (props: ServiceCardProps) => {
+export const SolutionItem: React.FC<SolutionItemProps> = (props: SolutionItemProps) => {
   return (
     <div className="text-black">
       <div className="flex">
@@ -19,7 +19,7 @@ export const ServiceItem: React.FC<ServiceCardProps> = (props: ServiceCardProps)
   )
 };
 
-export const SectionServices = () => {
+export const Solutions = () => {
   const { t } = useTranslation(['home']);
 
   return (
@@ -34,19 +34,19 @@ export const SectionServices = () => {
           <span className="text-dielle">{t('home:services.title1')}</span> {t('services.title2')}
         </h2>
         <div className="mt-8 z-10 grid gap-6 2xl:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-4">
-          <ServiceItem
+          <SolutionItem
             title={t('home:services.design')}
             description={t('home:services.designDesc')} />
-          <ServiceItem
+          <SolutionItem
             title={t('home:services.panels')}
             description={t('home:services.panelsDesc')} />
-          <ServiceItem
+          <SolutionItem
             title={t('home:services.software')}
             description={t('home:services.softwareDesc')} />
-          <ServiceItem
+          <SolutionItem
             title={t('home:services.onboard')}
             description={t('home:services.onboardDesc')} />
-          <ServiceItem
+          <SolutionItem
             title={t('home:services.robotic')}
             description={t('home:services.roboticDesc')} />
         </div>

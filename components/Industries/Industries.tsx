@@ -2,14 +2,14 @@ import React, { useCallback, useEffect, useRef } from 'react'
 import classNames from 'classnames';
 import { useTranslation } from 'next-i18next';
 
-type SectorCardProps = {
+type IndustryItemProps = {
   img: string;
   title: string;
   description: string;
   reverse?: boolean;
 };
 
-export const SectorItem: React.FC<SectorCardProps> = (props: SectorCardProps) => {
+export const IndustryItem: React.FC<IndustryItemProps> = (props: IndustryItemProps) => {
   return (
     <div className={classNames(
       'flex items-end', { 'flex-row-reverse text-right': props.reverse })
@@ -26,7 +26,7 @@ export const SectorItem: React.FC<SectorCardProps> = (props: SectorCardProps) =>
   )
 };
 
-export const SectionSectors = () => {
+export const Industries = () => {
   const { t } = useTranslation(['home']);
 
   return (
@@ -37,25 +37,25 @@ export const SectionSectors = () => {
         </h2>
         <div className="mt-8 space-y-8 relative">
           <div className="absolute top-20 left-20 bottom-32 right-20 border border-dielle -z-10" aria-hidden="true"></div>
-          <SectorItem
+          <IndustryItem
             img="/pasta.jpg"
             title={t('home:industries.food')}
             description={t('home:industries.foodDesc')} />
-          <SectorItem
+          <IndustryItem
             reverse
             img="/packaging.jpg"
             title={t('home:industries.packaging')}
             description={t('home:industries.packagingDesc')} />
-          <SectorItem
+          <IndustryItem
             img="/boat-lifter.jpg"
             title={t('home:industries.boat')}
             description={t('home:industries.boatDesc')} />
-          <SectorItem
+          <IndustryItem
             reverse={true}
             img="/marble.jpg"
             title={t('home:industries.marble')}
             description={t('home:industries.marbleDesc')} />
-          <SectorItem
+          <IndustryItem
             img="/metal.jpg"
             title={t('home:industries.metal')}
             description={t('home:industries.metalDesc')} />
