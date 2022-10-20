@@ -24,7 +24,7 @@ const Home: NextPage = () => {
       <section className="py-20 px-6">
         <div className="mx-auto p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
           <h1 className="font-medium">Contact us</h1>
-          <h2 className="mt-2 text-4xl">Have a question for us? We'll get back to you as soon as possible.</h2>
+          <h2 className="mt-2 text-4xl">Have a question for us? We&apos;ll get back to you as soon as possible.</h2>
           <p className="mt-4 font-light">
             If you need a quote, you just want to lean more about our solutions or for any question
             please compile the form below, our team of expert will take care of you.
