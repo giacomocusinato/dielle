@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useTranslation } from "next-i18next";
-import { PlusIcon } from "@heroicons/react/solid";
-import { HeroLogo } from "../HeroLogo";
+import React, { useState } from 'react';
+import { useTranslation } from 'next-i18next';
+import { PlusIcon } from '@heroicons/react/solid';
+import { HeroLogo } from '../HeroLogo';
 
 export const Hero = () => {
   const [showMore, setShowMore] = useState(false);

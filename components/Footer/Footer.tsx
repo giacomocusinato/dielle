@@ -1,5 +1,6 @@
-import React from "react";
-import { useTranslation } from "next-i18next";
+import React from 'react';
+import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 export const Footer = () => {
   const { t } = useTranslation(['common']);
@@ -9,8 +10,10 @@ export const Footer = () => {
       <div className="container py-20">
         <hr />
         <div className="py-12 flex justify-between">
-          <img
-            className="max-w-[150px] opacity-90"
+          <Image
+            className="opacity-90"
+            width={150}
+            height="100%"
             src="/logo-black.svg"
             alt={`${t('companyName')} - ${t('companyMotto')}`}
           />

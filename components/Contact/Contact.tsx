@@ -1,6 +1,6 @@
-import React from "react";
-import { useTranslation } from "next-i18next";
-import { Button } from "../Button";
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+import { Button } from '../Button';
 
 export const Contact = () => {
   const { t } = useTranslation(['common']);

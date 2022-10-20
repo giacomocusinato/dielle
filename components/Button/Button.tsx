@@ -1,6 +1,5 @@
-
-import classNames from "classnames";
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler } from 'react';
+import classNames from 'classnames';
 
 type ButtonProps = {
   href?: string,
