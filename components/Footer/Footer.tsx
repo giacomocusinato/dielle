@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer>
       <div className="container py-20">
         <hr />
-        <div className="py-5 flex justify-between">
+        <div className="py-12 flex justify-between">
           <img
             className="max-w-[150px] opacity-90"
             src="/logo-black.svg"

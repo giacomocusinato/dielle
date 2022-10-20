@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React from 'react'
+import Image from 'next/image';
 import classNames from 'classnames';
 import { useTranslation } from 'next-i18next';
 
@@ -14,10 +15,12 @@ export const IndustryItem: React.FC<IndustryItemProps> = (props: IndustryItemPro
     <div className={classNames(
       'flex items-end', { 'flex-row-reverse text-right': props.reverse })
     }>
-      <img
-        className="w-[300px] h-[200px] rounded-md shadow-md"
+      <Image
+        height={200}
+        width={300}
         src={props.img}
-        alt={props.title} />
+        alt={props.title}
+      />
       <div className={classNames('max-w-2xl', { 'mr-8': props.reverse, 'ml-8': !props.reverse, })}>
         <h3 className="text-xl font-semibold">{props.title}</h3>
         <p className="mt-1 text-sm">{props.description}</p>
@@ -38,25 +41,25 @@ export const Industries = () => {
         <div className="mt-8 space-y-8 relative">
           <div className="absolute top-20 left-20 bottom-32 right-20 border border-dielle -z-10" aria-hidden="true"></div>
           <IndustryItem
-            img="/pasta.jpg"
+            img="/industries/pasta.jpg"
             title={t('home:industries.food')}
             description={t('home:industries.foodDesc')} />
           <IndustryItem
             reverse
-            img="/packaging.jpg"
+            img="/industries/packaging.jpg"
             title={t('home:industries.packaging')}
             description={t('home:industries.packagingDesc')} />
           <IndustryItem
-            img="/boat-lifter.jpg"
+            img="/industries/boat-lifter.jpg"
             title={t('home:industries.boat')}
             description={t('home:industries.boatDesc')} />
           <IndustryItem
             reverse={true}
-            img="/marble.jpg"
+            img="/industries/marble.jpg"
             title={t('home:industries.marble')}
             description={t('home:industries.marbleDesc')} />
           <IndustryItem
-            img="/metal.jpg"
+            img="/industries/metal.jpg"
             title={t('home:industries.metal')}
             description={t('home:industries.metalDesc')} />
         </div>
