@@ -12,6 +12,7 @@ function Document(props: DocumentProps) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css" />
+        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/avenir-next-lt-pro" />
       </Head>
       <body>
         <Main />

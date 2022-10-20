@@ -17,7 +17,7 @@ module.exports = {
         'dielle': '#00A19A',
       },
       fontFamily: {
-        avenir: ['Avenir Next Condensed', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+        avenir: ['Avenir Next LT Pro', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
         sans: ['Fira Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
       }
     },
