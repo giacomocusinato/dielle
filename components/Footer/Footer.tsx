@@ -1,6 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
+
+const links = ['solutions', 'traits', 'industries', 'partners', 'contats']
+
+const scrollTo = (key: string) => document.getElementById(key)?.scrollIntoView({ behavior: 'smooth' });
 
 export const Footer = () => {
   const { t } = useTranslation(['common']);
@@ -19,9 +22,9 @@ export const Footer = () => {
           <div>
             <h3 className="font-medium">{t('companyLegalName')}</h3>
             <p>
-              Via Galileo Galilei 1, <br />
+              Galileo Galilei 1, <br />
               Galliera Veneta, PD <br />
-              35015, Italia
+              35015, Italy
             </p>
             <h3 className="mt-2 font-medium">Partita IVA</h3>
             <p>02474770282</p>
@@ -30,11 +33,15 @@ export const Footer = () => {
           <div>
             <h3 className="font-medium">Azienda</h3>
             <ul>
-              <li><a className="hover:underline" href="#">Soluzioni</a></li>
-              <li><a className="hover:underline" href="#">Su di noi</a></li>
-              <li><a className="hover:underline" href="#">Settori</a></li>
-              <li><a className="hover:underline" href="#">Parters</a></li>
-              <li><a className="hover:underline" href="#">Contattaci</a></li>
+              {links.map((key) => (
+                <li key={key}>
+                  <a
+                    className="hover:text-dielle focus:text-dielle"
+                    onClick={() => scrollTo(key)}>
+                    {t(`header:sections.${key}`)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -42,9 +49,9 @@ export const Footer = () => {
           <div>
             <h3 className="font-medium">Contatti</h3>
             <ul>
-              <li>Email: <a className="underline font-light" href={`mailto:${t('companyEmail')}`}>{t('companyEmail')}</a></li>
-              <li>Tel: <a className="underline font-light" href={`tel:${t('companyPhone')}`}>{t('companyPhone')}</a></li>
-              <li>Fax: <a className="underline font-light" href={`fax:${t('companyFax')}`}>{t('companyFax')}</a></li>
+              <li>Email: <a className="underline hover:text-dielle font-light" href={`mailto:${t('companyEmail')}`}>{t('companyEmail')}</a></li>
+              <li>Tel: <a className="underline hover:text-dielle font-light" href={`tel:${t('companyPhone')}`}>{t('companyPhone')}</a></li>
+              <li>Fax: <a className="underline hover:text-dielle font-light" href={`fax:${t('companyFax')}`}>{t('companyFax')}</a></li>
             </ul>
 
             <h3 className="mt-2 font-medium">Lavora con noi</h3>
