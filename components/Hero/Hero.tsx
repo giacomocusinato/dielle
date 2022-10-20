@@ -17,7 +17,7 @@ export const Hero = () => {
         <HeroLogo />
       </section>
 
-      <section className="container mx-auto py-20 px-8 xl:px-40">
+      <section className="container mx-auto py-10 sm:py-20 px-8 xl:px-40">
         <p className="text-4xl">
           <span className="text-dielle">Lorem Ipsum</span> dolor sit amet consectetur adipisicing elit.
           Ullam voluptatem ipsum repudiandae sint accusamus deserunt, vitae rem natus enim reprehenderit cumque dolores necessitatibus commodi soluta alias dicta tempore ipsa ab.

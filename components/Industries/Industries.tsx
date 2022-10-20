@@ -34,7 +34,7 @@ export const Industries = () => {
 
   return (
     <section id="industries">
-      <div className="container py-20">
+      <div className="container py-10 sm:py-20">
         <h2 className="mb-16 text-4xl text-medium sm:text-center">
           {t('industries.title1')} <span className="text-dielle">{t('home:industries.title2')}</span>
         </h2>

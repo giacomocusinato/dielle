@@ -7,16 +7,25 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className="container py-20">
+      <div className="container py-10 sm:py-20">
         <hr />
-        <div className="py-12 flex justify-between">
-          <Image
-            className="opacity-90"
-            width={150}
-            height="100%"
+        <div className="py-12 grid grid-rows-2 grid-cols-2 gap-y-6 sm:flex sm:justify-between">
+          <img
+            className="max-w-[120px] sm:max-w-[150px] opacity-90"
             src="/logo-black.svg"
             alt={`${t('companyName')} - ${t('companyMotto')}`}
           />
+
+          <div>
+            <h3 className="font-medium">{t('companyLegalName')}</h3>
+            <p>
+              Via Galileo Galilei 1, <br />
+              Galliera Veneta, PD <br />
+              35015, Italia
+            </p>
+            <h3 className="mt-2 font-medium">Partita IVA</h3>
+            <p>02474770282</p>
+          </div>
 
           <div>
             <h3 className="font-medium">Azienda</h3>
@@ -29,16 +38,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-medium">{t('companyLegalName')}</h3>
-            <p>
-              Via Galileo Galilei 1, <br />
-              Galliera Veneta, PD <br />
-              35015, Italia
-            </p>
-            <h3 className="mt-2 font-medium">Partita IVA</h3>
-            <p>02474770282</p>
-          </div>
 
           <div>
             <h3 className="font-medium">Contatti</h3>

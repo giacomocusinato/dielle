@@ -13,11 +13,11 @@ const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
 
   return (
     <>
-      <div className="container mx-auto w-full h-full flex justify-between items-center text-black" >
+      <div className="container w-full h-full flex justify-between items-center text-black" >
         <a onClick={() => (window.location.href = '/')}>
-          <h1 className="font-avenir text-2xl uppercase font-semibold tracking-[2px]">Dielle</h1>
+          <h1 className="font-avenir h-[27px] text-2xl uppercase font-semibold tracking-[2px]">Dielle</h1>
         </a>
-        <ul className="flex space-x-4">
+        <ul className="space-x-4 hidden sm:flex">
           {links.map((key) => (
             <li key={key}>
               <a

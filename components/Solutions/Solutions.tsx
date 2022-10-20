@@ -29,8 +29,8 @@ export const Solutions = () => {
         'hidden sm:block',
         'sm:translate-y-[664px] md:translate-y-[614px] lg:translate-y-[484px] xl:translate-y-[444px] 2xl:translate-y-[384px]'
       )} />
-      <div className="container pt-20">
-        <h2 className="mb-16 text-4xl text-medium sm:text-center">
+      <div className="container pt-10 sm:pt-20">
+        <h2 className="mb-10 sm:mb-16 text-4xl text-medium text-center">
           <span className="text-dielle">{t('home:services.title1')}</span> {t('services.title2')}
         </h2>
         <div className="mt-8 z-10 grid gap-6 2xl:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-4">

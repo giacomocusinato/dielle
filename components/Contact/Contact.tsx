@@ -7,19 +7,19 @@ export const Contact = () => {
 
   return (
     <section id="contats">
-      <div className="container flex justify-between py-20">
+      <div className="container py-10 sm:py-20 sm:flex sm:justify-between">
         <div className="max-w-[600px]">
           <div className="text-4xl">Restiamo in <span className="text-dielle">contatto</span></div>
-          <p className="my-8">
+          <p className="my-4 sm:my-8">
             Non esitare a contattarci se desideri ricevere ulteriori informazioni sui nostri servizi.
             Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
           </p>
           <Button size="lg">Contattaci</Button>
         </div>
 
-        <div className="max-w-[600px] text-right">
+        <div className="max-w-[600px] mt-12 sm:mt-0 text-right">
           <div className="text-4xl"><span className="text-dielle">Lavora</span> con noi</div>
-          <p className="my-8">
+          <p className="my-4 sm:my-8">
             Non esitare a contattarci se desideri ricevere ulteriori informazioni sui nostri servizi.
             Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
           </p>
