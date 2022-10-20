@@ -19,9 +19,8 @@ const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
         </a>
         <ul className="flex space-x-4">
           {links.map((key) => (
-            <li>
+            <li key={key}>
               <a
-                key={key}
                 className="text-lg text-semibold hover:text-dielle focus:text-dielle"
                 onClick={() => scrollTo(key)}>
                 {t(`header:sections.${key}`)}
