@@ -14,7 +14,7 @@ export const Contact = () => {
             Non esitare a contattarci se desideri ricevere ulteriori informazioni sui nostri servizi.
             Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
           </p>
-          <Button size="lg">Contattaci</Button>
+          <Button size="lg" href="/contact">Contattaci</Button>
         </div>
 
         <div className="max-w-[600px] mt-12 sm:mt-0 text-right">
