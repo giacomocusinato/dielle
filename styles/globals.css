@@ -1,7 +1,10 @@
+@import 'markdown';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 a {
-    @apply cursor-pointer;
+  @apply cursor-pointer;
 }
