@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { PlusIcon } from '@heroicons/react/solid';
 import { HeroLogo } from '../HeroLogo';
@@ -8,10 +8,17 @@ export const Hero = () => {
 
   const { t } = useTranslation(['common', 'home']);
 
+  useEffect(() => {
+    const el = document.querySelector('video');
+    if (el) {
+      el.playbackRate = 0.8;
+    }
+  }, [])
+
   return (
     <>
       <section id="hero" className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
-        <video className="absolute min-w-full min-h-full object-cover -z-50 brightness-50" autoPlay muted loop>
+        <video className="absolute min-w-full min-h-full object-cover -z-50 brightness-90 blur-sm" autoPlay muted loop>
           <source src="/hero.mp4" type="video/mp4" />
         </video>
         <HeroLogo />

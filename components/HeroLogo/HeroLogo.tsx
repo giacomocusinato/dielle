@@ -47,7 +47,7 @@ export const HeroLogo = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex items-center justify-center drop-shadow">
+    <div className="flex items-center justify-center drop-shadow-md">
       <SVGLogo />
       <p className={classNames(
         "pl-2 sm:pl-4 text-[16px] sm:text-[28px] lg:text-[40px] text-white tracking-[4px] font-semibold capitalize leading-tight",
