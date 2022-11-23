@@ -6,27 +6,30 @@ export const Contact = () => {
   const { t } = useTranslation(['common']);
 
   return (
-    <section id="contats">
-      <div className="container py-10 sm:py-20 sm:flex sm:justify-between">
-        <div className="max-w-[600px]">
-          <div className="text-4xl">Restiamo in <span className="text-dielle">contatto</span></div>
-          <p className="my-4 sm:my-8">
-            Non esitare a contattarci se desideri ricevere ulteriori informazioni sui nostri servizi.
-            Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
-          </p>
-          <Button size="lg" href="/contact">Contattaci</Button>
-        </div>
+    <section id="contats" className="bg-gray-100">
+      <div className="container">
+        <div className="py-10 sm:py-20 sm:flex sm:justify-between sm:gap-x-4">
+          <div className="max-w-[600px]">
+            <div className="text-4xl">Restiamo in <span className="text-dielle">contatto</span></div>
+            <p className="my-4 sm:my-8">
+              Non esitare a contattarci se desideri ricevere ulteriori informazioni sui nostri servizi.
+              Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
+            </p>
+            <Button size="lg" href="/contact">Contattaci</Button>
+          </div>
 
-        <div className="max-w-[600px] mt-12 sm:mt-0 text-right">
-          <div className="text-4xl"><span className="text-dielle">Lavora</span> con noi</div>
-          <p className="my-4 sm:my-8">
-            Non esitare a contattarci se desideri ricevere ulteriori informazioni sui nostri servizi.
-            Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
-          </p>
-          <div className="float-right">
-            <Button size="lg">Vedi offerte</Button>
+          <div className="max-w-[600px] mt-12 sm:mt-0 text-right">
+            <div className="text-4xl"><span className="text-dielle">Lavora</span> con noi</div>
+            <p className="my-4 sm:my-8">
+              Non esitare a contattarci se desideri ricevere ulteriori informazioni sui nostri servizi.
+              Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
+            </p>
+            <div className="float-right">
+              <Button size="lg" href="/jobs">Vedi offerte</Button>
+            </div>
           </div>
         </div>
+        <hr />
       </div>
     </section>
   );
