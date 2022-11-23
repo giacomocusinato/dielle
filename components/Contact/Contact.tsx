@@ -1,35 +1,44 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { Button } from '../Button';
+import { ArrowRightIcon } from '@heroicons/react/solid';
 
 export const Contact = () => {
   const { t } = useTranslation(['common']);
 
   return (
-    <section id="contats" className="bg-gray-100">
-      <div className="container">
-        <div className="py-10 sm:py-20 sm:flex sm:justify-between sm:gap-x-4">
-          <div className="max-w-[600px]">
-            <div className="text-4xl">Restiamo in <span className="text-dielle">contatto</span></div>
-            <p className="my-4 sm:my-8">
-              Non esitare a contattarci se desideri ricevere ulteriori informazioni sui nostri servizi.
-              Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
-            </p>
-            <Button size="lg" href="/contact">Contattaci</Button>
-          </div>
+    <section id="jobs">
+      <div className="container py-10 sm:py-20">
+        <h2 className="mb-10 sm:mb-16 text-4xl text-medium text-center">
+          <span className="text-dielle">Lavora</span> con noi
+        </h2>
 
-          <div className="max-w-[600px] mt-12 sm:mt-0 text-right">
-            <div className="text-4xl"><span className="text-dielle">Lavora</span> con noi</div>
-            <p className="my-4 sm:my-8">
-              Non esitare a contattarci se desideri ricevere ulteriori informazioni sui nostri servizi.
-              Il nostro personale qualificato risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
+        <div className="flex justify-center">
+          <img src="cables2.jpg" className="w-[450px] mr-8" />
+          <div className="max-w-[600px] mt-12 sm:mt-0 ">
+
+            <p className="my-4">
+              Siamo sempre alla ricerca di personale.
+              <br />
+              Vuoi far parte del nostro team? Consulta le posizione aperte ed inviaci il tuo CV.
             </p>
-            <div className="float-right">
-              <Button size="lg" href="/jobs">Vedi offerte</Button>
-            </div>
+            <Button className="mt-6" rounded stroked size="lg" href="/jobs">
+              Vedi posizioni aperte
+              <ArrowRightIcon className="w-5 ml-4" />
+            </Button>
+
+
+            <p className="mt-16">
+              Qualche dubbio o richiesta specifica? Contattaci tramite la apposita form.
+              Il nostro personale risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
+            </p>
+            <Button className="mt-6" rounded stroked size="lg" href="/contact">
+              Contattaci
+              <ArrowRightIcon className="w-5 ml-4" />
+            </Button>
+
           </div>
         </div>
-        <hr />
       </div>
     </section>
   );
