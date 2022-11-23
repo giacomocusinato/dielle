@@ -9,10 +9,9 @@ export const Footer = () => {
   const { t } = useTranslation(['common']);
 
   return (
-    <footer>
+    <footer className="bg-gray-100 mt-10 sm:mt-20">
       <div className="container py-10 sm:py-20">
-        <hr />
-        <div className="py-12 grid grid-rows-2 grid-cols-2 gap-y-6 sm:flex sm:justify-between">
+        <div className="grid grid-rows-2 grid-cols-2 gap-y-6 sm:flex sm:justify-between">
           <img
             className="max-w-[120px] sm:max-w-[150px] opacity-90"
             src="/logo-black.svg"
@@ -59,8 +58,10 @@ export const Footer = () => {
           </div>
 
         </div>
-        <hr />
-        <div className="py-5 font-medium">
+
+        <hr className="block my-5" />
+
+        <div>
           &#169; {t('companyLegalName')} {new Date().getFullYear()}. All Rights Reserved.
         </div>
       </div>
