@@ -10,7 +10,7 @@ function Document(props: DocumentProps) {
   return (
     <Html lang={lang}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css" />
         <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/avenir-next-lt-pro" />
       </Head>
