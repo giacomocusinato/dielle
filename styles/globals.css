@@ -1,9 +1,9 @@
 @import 'markdown';
+@import 'animations';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 a {
   @apply cursor-pointer;
