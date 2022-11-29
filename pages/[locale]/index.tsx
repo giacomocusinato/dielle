@@ -10,6 +10,7 @@ import { Partners } from '../../components/Partners';
 import { Contact } from '../../components/Contact';
 import { Footer } from '../../components/Footer';
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
+import { FadeInContent } from '../../components/FadeInContent';
 
 const Home: NextPage = () => {
   const { t } = useTranslation(['common', 'home']);
@@ -19,13 +20,30 @@ const Home: NextPage = () => {
       <Head>
         <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
       </Head>
+
       <Header />
       <Hero />
-      <Solutions />
-      <Traits />
-      <Industries />
-      <Partners />
-      <Contact />
+
+      <FadeInContent>
+        <Solutions />
+      </FadeInContent>
+
+      <FadeInContent>
+        <Traits />
+      </FadeInContent>
+
+      <FadeInContent>
+        <Industries />
+      </FadeInContent>
+
+      <FadeInContent>
+        <Partners />
+      </FadeInContent>
+
+      <FadeInContent>
+        <Contact />
+      </FadeInContent>
+
       <Footer />
     </>
   )
