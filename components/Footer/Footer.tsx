@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 export const Footer = () => {
@@ -29,42 +30,52 @@ export const Footer = () => {
             <h3 className="font-medium">Azienda</h3>
             <ul>
               <li>
-                <a
-                  href="/"
-                  className="hover:text-dielle focus:text-dielle">
-                  {t('header:links.home')}
-                </a>
+                <Link href="/">
+                  <a
+
+                    className="hover:text-dielle focus:text-dielle">
+                    {t('header:links.home')}
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/solutions"
-                  className="hover:text-dielle focus:text-dielle">
-                  {t('header:links.solutions')}
-                </a>
+                <Link href="/solutions">
+                  <a
+
+                    className="hover:text-dielle focus:text-dielle">
+                    {t('header:links.solutions')}
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/industries"
-                  className="hover:text-dielle focus:text-dielle">
-                  {t('header:links.industries')}
-                </a>
+                <Link href="/industries">
+                  <a
+
+                    className="hover:text-dielle focus:text-dielle">
+                    {t('header:links.industries')}
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/jobs"
-                  className="hover:text-dielle focus:text-dielle flex items-center">
-                  {t('header:links.jobs')}
-                  <span className="bg-dielle p-1 ml-1 h-fit text-[10px] leading-[10px] uppercase text-white rounded-sm">
-                    Hiring
-                  </span>
-                </a>
+                <Link href="/jobs">
+                  <a
+
+                    className="hover:text-dielle focus:text-dielle flex items-center">
+                    {t('header:links.jobs')}
+                    <span className="bg-dielle p-1 ml-1 h-fit text-[10px] leading-[10px] uppercase text-white rounded-sm">
+                      Hiring
+                    </span>
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contacts"
-                  className="hover:text-dielle focus:text-dielle">
-                  {t('header:links.contacts')}
-                </a>
+                <Link href="/contacts">
+                  <a
+
+                    className="hover:text-dielle focus:text-dielle">
+                    {t('header:links.contacts')}
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -73,9 +84,15 @@ export const Footer = () => {
           <div>
             <h3 className="font-medium">Contatti</h3>
             <ul>
-              <li>Email: <a className="underline hover:text-dielle font-light" href={`mailto:${t('companyEmail')}`}>{t('companyEmail')}</a></li>
-              <li>Tel: <a className="underline hover:text-dielle font-light" href={`tel:${t('companyPhone')}`}>{t('companyPhone')}</a></li>
-              <li>Fax: <a className="underline hover:text-dielle font-light" href={`fax:${t('companyFax')}`}>{t('companyFax')}</a></li>
+              <li>
+                Email: <a className="underline hover:text-dielle font-light" href={`mailto:${t('companyEmail')}`}>{t('companyEmail')}</a>
+              </li>
+              <li>
+                Tel: <a className="underline hover:text-dielle font-light" href={`tel:${t('companyPhone')}`}>{t('companyPhone')}</a>
+              </li>
+              <li>
+                Fax: <a className="underline hover:text-dielle font-light" href={`fax:${t('companyFax')}`}>{t('companyFax')}</a>
+              </li>
             </ul>
 
             <p></p>

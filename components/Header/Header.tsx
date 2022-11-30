@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import classNames from 'classnames';
 import { LanguagePicker } from '../LanguagePicker';
@@ -9,17 +10,17 @@ const HeaderLink: React.FC<{ to: string, translateKey: string }> = ({ to, transl
 
   return (
     <li key={translateKey}>
-      <a
-        href={to}
-        className="text-lg text-semibold hover:text-dielle focus:text-dielle flex items-center">
-        {t(`header:links.${translateKey}`)}
-        {translateKey === 'jobs' && (
-          <span className="bg-dielle p-1 ml-1 text-[10px] leading-[10px] uppercase text-white rounded-sm">
-            Hiring
-          </span>
-        )}
-      </a>
-    </li>
+      <Link href={to}>
+        <a className="flex items-center text-lg text-semibold hover:text-dielle focus:text-dielle">
+          {t(`header:links.${translateKey}`)}
+          {translateKey === 'jobs' && (
+            <span className="bg-dielle p-1 ml-1 text-[10px] leading-[10px] uppercase text-white rounded-sm">
+              Hiring
+            </span>
+          )}
+        </a>
+      </Link>
+    </li >
   )
 }
 
