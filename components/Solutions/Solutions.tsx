@@ -25,39 +25,37 @@ const _Solutions = () => {
 
   return (
     <section id="solutions" className="relative" >
-      <div className="pt-10 sm:pt-20">
+      <div className="py-10 sm:py-20">
         <h2 className="mb-10 sm:mb-16 text-4xl text-medium text-center">
           <span className="text-dielle">{t('home:services.title1')}</span> {t('services.title2')}
         </h2>
 
-        <div className="py-20">
-          <div className="container">
-            <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-              <SolutionItem
-                img="/solutions/panels.jpg"
-                title={t('home:services.panels')}
-                description={t('home:services.panelsDesc')} />
-              <SolutionItem
-                img="/solutions/software.jpg"
-                title={t('home:services.software')}
-                description={t('home:services.softwareDesc')} />
-              <SolutionItem
-                img="/solutions/onboard.jpg"
-                title={t('home:services.onboard')}
-                description={t('home:services.onboardDesc')} />
-              <SolutionItem
-                img="/solutions/robotic.jpg"
-                title={t('home:services.robotic')}
-                description={t('home:services.roboticDesc')} />
-            </div>
-            <Button className="mt-16" rounded stroked size="lg" href="/contact">
-              Scopri di più
-              <ArrowRightIcon className="w-5 ml-4" />
-            </Button>
+        <div className="container">
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+            <SolutionItem
+              img="/solutions/panels.jpg"
+              title={t('home:services.panels')}
+              description={t('home:services.panelsDesc')} />
+            <SolutionItem
+              img="/solutions/software.jpg"
+              title={t('home:services.software')}
+              description={t('home:services.softwareDesc')} />
+            <SolutionItem
+              img="/solutions/onboard.jpg"
+              title={t('home:services.onboard')}
+              description={t('home:services.onboardDesc')} />
+            <SolutionItem
+              img="/solutions/robotic.jpg"
+              title={t('home:services.robotic')}
+              description={t('home:services.roboticDesc')} />
           </div>
+          <Button className="mt-16" rounded stroked size="lg" href="/contact">
+            Scopri di più
+            <ArrowRightIcon className="w-5 ml-4" />
+          </Button>
         </div>
       </div>
-    </section >
+    </section>
   )
 };
 

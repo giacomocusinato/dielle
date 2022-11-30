@@ -7,13 +7,13 @@ const _Traits = () => {
 
   return (
     <section id="traits" className="relative">
-      <div className="container py-10 sm:py-40 lg:px-[180px] xl:px-[240px]">
+      <div className="container py-10 sm:py-20 lg:px-40 xl:px-60">
         <h2 className="mb-10 sm:mb-16 text-4xl text-medium text-center">
           Su di <span className="text-dielle">noi</span>
         </h2>
 
         <div className="space-y-12">
-          <div className="flex max-w-4xl">
+          <div className="flex">
             <img src="/ul-certification.svg" className="w-20 flex-shrink-0 self-start" />
             <div className="ml-8">
               <h3 className="mb-1 text-xl font-semibold">UL Certification</h3>
@@ -21,7 +21,7 @@ const _Traits = () => {
             </div>
           </div>
 
-          <div className="flex max-w-4xl">
+          <div className="flex">
             <img src="/client-support.svg" className="w-20 flex-shrink-0 self-start" />
             <div className="ml-8">
               <h3 className="mb-1 text-xl font-semibold">Supporto cliente</h3>
@@ -29,7 +29,7 @@ const _Traits = () => {
             </div>
           </div>
 
-          <div className="flex max-w-4xl">
+          <div className="flex">
             <img src="/industry-4.svg" className="w-20 flex-shrink-0 self-start" />
             <div className="ml-8">
               <h3 className="mb-1 text-xl font-semibold">Industria 4.0</h3>
