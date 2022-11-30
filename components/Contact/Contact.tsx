@@ -1,9 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import { Button } from '../Button';
 import { ArrowRightIcon } from '@heroicons/react/solid';
+import { Button } from '../Button';
+import { withFadeInContent } from '../FadeInContent';
 
-export const Contact = () => {
+export const _Contact = () => {
   const { t } = useTranslation(['common']);
 
   return (
@@ -43,3 +44,5 @@ export const Contact = () => {
     </section>
   );
 }
+
+export const Contact = withFadeInContent(_Contact);

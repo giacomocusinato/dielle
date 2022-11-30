@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'next-i18next';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import { Button } from '../Button';
+import { withFadeInContent } from '../FadeInContent';
 
 type SolutionItemProps = {
   title: string;
@@ -9,7 +10,7 @@ type SolutionItemProps = {
   img: string;
 };
 
-export const SolutionItem: React.FC<SolutionItemProps> = (props: SolutionItemProps) => {
+const SolutionItem: React.FC<SolutionItemProps> = (props: SolutionItemProps) => {
   return (
     <div>
       <img className="rounded" src={props.img} alt={props.title} />
@@ -19,7 +20,7 @@ export const SolutionItem: React.FC<SolutionItemProps> = (props: SolutionItemPro
   )
 };
 
-export const Solutions = () => {
+const _Solutions = () => {
   const { t } = useTranslation(['home']);
 
   return (
@@ -30,7 +31,7 @@ export const Solutions = () => {
         </h2>
 
         <div className="py-20">
-          <div className="container ">
+          <div className="container">
             <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
               <SolutionItem
                 img="/solutions/panels.jpg"
@@ -56,6 +57,8 @@ export const Solutions = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 };
+
+export const Solutions = withFadeInContent(_Solutions);

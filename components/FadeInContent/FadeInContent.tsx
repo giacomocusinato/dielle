@@ -32,3 +32,9 @@ export const FadeInContent: React.FC<FadeInContentProps> = ({ children }) => {
 
   return (<div ref={domRef} className={classNames('fade-in-content', isVisible && 'visible')}>{children}</div>);
 };
+
+export const withFadeInContent = (Component: React.ComponentType) => () => (
+  <FadeInContent>
+    <Component />
+  </FadeInContent>
+)

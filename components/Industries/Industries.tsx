@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'next-i18next';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import { Button } from '../Button';
+import { withFadeInContent } from '../FadeInContent';
 
 type IndustryItemProps = {
   img: string;
@@ -10,7 +11,7 @@ type IndustryItemProps = {
   reverse?: boolean;
 };
 
-export const IndustryItem: React.FC<IndustryItemProps> = (props: IndustryItemProps) => {
+const IndustryItem: React.FC<IndustryItemProps> = (props: IndustryItemProps) => {
   return (
     <div>
       <img className="rounded" src={props.img} alt={props.title} />
@@ -20,7 +21,7 @@ export const IndustryItem: React.FC<IndustryItemProps> = (props: IndustryItemPro
   );
 };
 
-export const Industries = () => {
+const _Industries = () => {
   const { t } = useTranslation(['home']);
 
   return (
@@ -66,3 +67,5 @@ export const Industries = () => {
     </section>
   )
 };
+
+export const Industries = withFadeInContent(_Industries);

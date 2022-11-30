@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import { withFadeInContent } from '../FadeInContent';
 
-export const Traits = () => {
+const _Traits = () => {
   const { t } = useTranslation(['common']);
 
   return (
@@ -41,3 +42,5 @@ export const Traits = () => {
     </section>
   );
 }
+
+export const Traits = withFadeInContent(_Traits);
