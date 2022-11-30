@@ -1,6 +1,7 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React from 'react'
 import classNames from 'classnames';
 import { useTranslation } from 'next-i18next';
+import { withFadeInContent } from '../FadeInContent';
 
 const partners = [
   { name: 'ABB', src: '/partners/abb.svg', customClass: 'max-w-[150px]' },
@@ -16,7 +17,7 @@ const partners = [
   { name: 'zanardo', src: '/partners/zanardo.svg' },
 ]
 
-export const Partners = () => {
+export const _Partners = () => {
   const { t } = useTranslation(['home']);
 
   return (
@@ -40,3 +41,5 @@ export const Partners = () => {
     </section>
   )
 };
+
+export const Partners = withFadeInContent(_Partners);

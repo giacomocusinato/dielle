@@ -10,7 +10,6 @@ import { Partners } from '../../components/Partners';
 import { Contact } from '../../components/Contact';
 import { Footer } from '../../components/Footer';
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
-import { FadeInContent } from '../../components/FadeInContent';
 
 const Home: NextPage = () => {
   const { t } = useTranslation(['common', 'home']);
@@ -23,27 +22,11 @@ const Home: NextPage = () => {
 
       <Header />
       <Hero />
-
-      <FadeInContent>
-        <Solutions />
-      </FadeInContent>
-
-      <FadeInContent>
-        <Traits />
-      </FadeInContent>
-
-      <FadeInContent>
-        <Industries />
-      </FadeInContent>
-
-      <FadeInContent>
-        <Partners />
-      </FadeInContent>
-
-      <FadeInContent>
-        <Contact />
-      </FadeInContent>
-
+      <Solutions />
+      <Traits />
+      <Industries />
+      <Partners />
+      <Contact />
       <Footer />
     </>
   )
