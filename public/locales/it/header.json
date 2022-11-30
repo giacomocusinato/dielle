@@ -1,9 +1,9 @@
 {
-  "sections": {
+  "links": {
+    "home": "Home",
     "solutions": "Soluzioni",
-    "traits": "Su di noi",
     "industries": "Settori",
-    "partners": "Partner",
-    "contats": "Contatti"
+    "jobs": "Lavora con noi",
+    "contacts": "Contattaci"
   }
 }

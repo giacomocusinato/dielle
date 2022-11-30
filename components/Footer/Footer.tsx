@@ -1,10 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 
-const links = ['solutions', 'traits', 'industries', 'partners', 'contats']
-
-const scrollTo = (key: string) => document.getElementById(key)?.scrollIntoView({ behavior: 'smooth' });
-
 export const Footer = () => {
   const { t } = useTranslation(['common']);
 
@@ -32,15 +28,44 @@ export const Footer = () => {
           <div>
             <h3 className="font-medium">Azienda</h3>
             <ul>
-              {links.map((key) => (
-                <li key={key}>
-                  <a
-                    className="hover:text-dielle focus:text-dielle"
-                    onClick={() => scrollTo(key)}>
-                    {t(`header:sections.${key}`)}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="/"
+                  className="hover:text-dielle focus:text-dielle">
+                  {t('header:links.home')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/solutions"
+                  className="hover:text-dielle focus:text-dielle">
+                  {t('header:links.solutions')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/industries"
+                  className="hover:text-dielle focus:text-dielle">
+                  {t('header:links.industries')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/jobs"
+                  className="hover:text-dielle focus:text-dielle flex items-center">
+                  {t('header:links.jobs')}
+                  <span className="bg-dielle p-1 ml-1 h-fit text-[10px] leading-[10px] uppercase text-white rounded-sm">
+                    Hiring
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contacts"
+                  className="hover:text-dielle focus:text-dielle">
+                  {t('header:links.contacts')}
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -53,7 +78,6 @@ export const Footer = () => {
               <li>Fax: <a className="underline hover:text-dielle font-light" href={`fax:${t('companyFax')}`}>{t('companyFax')}</a></li>
             </ul>
 
-            <h3 className="mt-2 font-medium">Lavora con noi</h3>
             <p></p>
           </div>
 

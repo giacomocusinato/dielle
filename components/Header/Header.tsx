@@ -4,9 +4,24 @@ import classNames from 'classnames';
 import { LanguagePicker } from '../LanguagePicker';
 import { Button } from '../Button';
 
-const links = ['solutions', 'traits', 'industries', 'partners', 'contats']
+const HeaderLink: React.FC<{ to: string, translateKey: string }> = ({ to, translateKey }) => {
+  const { t } = useTranslation(['header']);
 
-const scrollTo = (key: string) => document.getElementById(key)?.scrollIntoView({ behavior: 'smooth' });
+  return (
+    <li key={translateKey}>
+      <a
+        href={to}
+        className="text-lg text-semibold hover:text-dielle focus:text-dielle flex items-center">
+        {t(`header:links.${translateKey}`)}
+        {translateKey === 'jobs' && (
+          <span className="bg-dielle p-1 ml-1 text-[10px] leading-[10px] uppercase text-white rounded-sm">
+            Hiring
+          </span>
+        )}
+      </a>
+    </li>
+  )
+}
 
 const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
   const { t } = useTranslation(['header']);
@@ -18,15 +33,10 @@ const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
           <h1 className="font-avenir h-[27px] text-2xl uppercase font-semibold tracking-[2px]">Dielle</h1>
         </a>
         <ul className="space-x-4 hidden sm:flex">
-          {links.map((key) => (
-            <li key={key}>
-              <a
-                className="text-lg text-semibold hover:text-dielle focus:text-dielle"
-                onClick={() => scrollTo(key)}>
-                {t(`header:sections.${key}`)}
-              </a>
-            </li>
-          ))}
+          <HeaderLink to="/" translateKey="home" />
+          <HeaderLink to="/solutions" translateKey="solutions" />
+          <HeaderLink to="/industries" translateKey="industries" />
+          <HeaderLink to="jobs/" translateKey="jobs" />
         </ul>
 
         <div className="flex items-center space-x-4">
