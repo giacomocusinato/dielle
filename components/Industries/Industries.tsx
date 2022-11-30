@@ -15,7 +15,7 @@ const IndustryItem: React.FC<IndustryItemProps> = (props: IndustryItemProps) => 
   return (
     <div>
       <img className="rounded" src={props.img} alt={props.title} />
-      <h3 className="text-lg font-medium mt-1">{props.title}</h3>
+      <h3 className="text-lg font-medium mt-[6px]">{props.title}</h3>
       <p>{props.description}</p>
     </div>
   );
@@ -56,7 +56,7 @@ const _Industries = () => {
               title={t('home:industries.metal')}
               description={t('home:industries.metalDesc')} />
           </div>
-          <Button className="mt-16" rounded stroked size="lg" href="/contact">
+          <Button className="mt-10" rounded stroked size="md" href="/contact">
             Scopri di più
             <ArrowRightIcon className="w-5 ml-4" />
           </Button>

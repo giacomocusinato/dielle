@@ -23,7 +23,7 @@ export const _Contact = () => {
               <br />
               Vuoi far parte del nostro team? Consulta le posizione aperte ed inviaci il tuo CV.
             </p>
-            <Button className="mt-6" rounded stroked size="lg" href="/jobs">
+            <Button className="mt-6" rounded stroked size="md" href="/jobs">
               Vedi posizioni aperte
               <ArrowRightIcon className="w-5 ml-4" />
             </Button>
@@ -33,7 +33,7 @@ export const _Contact = () => {
               Qualche dubbio o richiesta specifica? Contattaci tramite la apposita form.
               Il nostro personale risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.
             </p>
-            <Button className="mt-6" rounded stroked size="lg" href="/contact">
+            <Button className="mt-6" rounded stroked size="md" href="/contact">
               Contattaci
               <ArrowRightIcon className="w-5 ml-4" />
             </Button>
