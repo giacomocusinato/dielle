@@ -46,7 +46,7 @@ const Jobs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ jobs }
 
           <h2 className="mt-2 text-2xl">Candidatura libera</h2>
           <p className="mt-4 mb-0 font-light">
-            Non c'è la posizione che fa per te? Inviaci una candidatura libera tramite il pulsante qui sotto.
+            Non c&apos;è la posizione che fa per te? Inviaci una candidatura libera tramite il pulsante qui sotto.
             Siamo sempre alla ricerca di personale di ogni esperienza...
           </p>
           <Button className="!w-full mt-8" size="lg" href={`mailto:${t('companyEmail')}`}>Invia il CV</Button>
