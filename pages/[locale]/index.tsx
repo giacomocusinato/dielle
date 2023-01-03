@@ -23,6 +23,10 @@ const Home: NextPage = () => {
       <Header />
       <Hero />
       <Solutions />
+      <img
+        src="/cables.jpg"
+        className="lg:max-h-[300px] w-full"
+      />
       <Traits />
       <Industries />
       <Partners />
