@@ -17,26 +17,32 @@ const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ job }) 
       <Head>
         <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
       </Head>
-      <Header />
 
-      <div className="absolute bg-dielle opacity-20 w-full h-[450px] -z-10"></div>
+      <div className="flex flex-col h-screen">
+        <Header />
 
-      <section className="py-10 sm:py-20 px-6">
-        <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
-          <h1 className="font-medium text-dielle">Work with us</h1>
-          <h2 className="mt-2 text-4xl">{job.data.title}</h2>
+        <div className="relative flex-1">
 
-          <div
-            className="markdown font-light"
-            dangerouslySetInnerHTML={{ __html: job.content }}
-          />
+          <div className="absolute bg-dielle opacity-20 w-full h-[450px] -z-10"></div>
 
-          <Button className="!w-full mt-8" size="lg" href={`mailto:${t('companyEmail')}`}>Invia il CV</Button>
+          <section className="py-10 sm:py-20 px-6">
+            <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
+              <h1 className="font-medium text-dielle">Work with us</h1>
+              <h2 className="mt-2 text-4xl">{job.data.title}</h2>
 
+              <div
+                className="markdown font-light"
+                dangerouslySetInnerHTML={{ __html: job.content }}
+              />
+
+              <Button className="!w-full mt-8" size="lg" href={`mailto:${t('companyEmail')}`}>Invia il CV</Button>
+
+            </div>
+          </section>
         </div>
-      </section>
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   )
 }

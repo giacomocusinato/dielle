@@ -63,7 +63,7 @@ export const Header = () => {
     <>
       <nav
         aria-hidden={isSticky}
-        className="w-full h-20">
+        className="w-full h-20 flex-shrink-0">
         <HeaderContent isSticky={isSticky} />
       </nav>
       <nav
