@@ -37,7 +37,7 @@ const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
           <HeaderLink to="/" translateKey="home" />
           <HeaderLink to="/solutions" translateKey="solutions" />
           <HeaderLink to="/industries" translateKey="industries" />
-          <HeaderLink to="jobs/" translateKey="jobs" />
+          <HeaderLink to="/jobs" translateKey="jobs" />
         </ul>
 
         <div className="flex items-center space-x-4">
