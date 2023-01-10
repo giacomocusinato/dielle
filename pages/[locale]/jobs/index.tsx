@@ -11,7 +11,7 @@ import matter from 'gray-matter';
 import fs from 'fs';
 
 const Jobs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ jobs }) => {
-  const { t } = useTranslation(['common', 'home']);
+  const { t } = useTranslation(['common', 'home', 'jobs']);
 
   return (
     <>
@@ -27,11 +27,10 @@ const Jobs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ jobs }
 
           <section className="py-10 sm:py-20 px-6">
             <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
-              <h1 className="font-medium text-dielle">Work with us</h1>
-              <h2 className="mt-2 text-4xl">Scopri tutti le offerte di lavoro disponibili</h2>
+              <h1 className="font-medium text-dielle">{t('jobs:title1')}</h1>
+              <h2 className="mt-2 text-4xl">{t('jobs:title2')}</h2>
               <p className="mt-4 mb-0 font-light">
-                Siamo sempre alla ricerca di nuovo personale, non esitare a inviarci il tuo curriculumn
-                anche se la tua figura non è elencata tra le posizioni aperte!
+                {t('jobs:desc')}
               </p>
 
               <div className="flex flex-col space-y-4 my-8">
@@ -47,12 +46,11 @@ const Jobs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ jobs }
                 ))}
               </div>
 
-              <h2 className="mt-2 text-2xl">Candidatura libera</h2>
+              <h2 className="mt-2 text-2xl">{t('jobs:application')}</h2>
               <p className="mt-4 mb-0 font-light">
-                Non c&apos;è la posizione che fa per te? Inviaci una candidatura libera tramite il pulsante qui sotto.
-                Siamo sempre alla ricerca di personale di ogni esperienza...
+                {t('jobs:applicationDesc')}
               </p>
-              <Button className="!w-full mt-8" size="lg" href={`mailto:${t('companyEmail')}`}>Invia il CV</Button>
+              <Button className="!w-full mt-8" size="lg" href={`mailto:${t('companyEmail')}`}>{t('jobs:sendCV')}</Button>
             </div>
           </section>
         </div>
@@ -75,7 +73,7 @@ const getStaticProps: GetStaticProps = async (ctx) => {
     return { slug, data, content };
   });
 
-  const translateProps = await getI18nProps(ctx, ['common', 'head', 'header']);
+  const translateProps = await getI18nProps(ctx, ['common', 'head', 'header', 'jobs']);
 
   return {
     props: {

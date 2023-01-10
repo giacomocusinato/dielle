@@ -10,7 +10,7 @@ import md from 'markdown-it';
 import fs from 'fs';
 
 const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ job }) => {
-  const { t } = useTranslation(['common', 'home']);
+  const { t } = useTranslation(['jobs']);
 
   return (
     <>
@@ -27,7 +27,7 @@ const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ job }) 
 
           <section className="py-10 sm:py-20 px-6">
             <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
-              <h1 className="font-medium text-dielle">Work with us</h1>
+              <h1 className="font-medium text-dielle">{t('jobs:title1')}</h1>
               <h2 className="mt-2 text-4xl">{job.data.title}</h2>
 
               <div
@@ -63,7 +63,7 @@ const getStaticProps: GetStaticProps = async (ctx) => {
     }).render(content);
     const job = { slug, data, content: html };
 
-    const translateProps = await getI18nProps(ctx, ['common', 'head', 'header']);
+    const translateProps = await getI18nProps(ctx, ['common', 'head', 'header', 'jobs']);
 
     return {
       props: {
