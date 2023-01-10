@@ -1,16 +1,17 @@
 import type { NextPage } from 'next'
-import { useTranslation } from 'next-i18next'
+import { Trans, useTranslation } from 'next-i18next'
 import { LocationMarkerIcon, MailIcon } from "@heroicons/react/solid";
 import { Head } from '../../components/Head';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
 import { Button } from '../../components/Button';
+import Link from 'next/link';
 
 const inputClasses = 'py-3 px-4 w-full outline outline-1 outline-gray-300 focus:outline-dielle rounded-sm';
 
 const Home: NextPage = () => {
-  const { t } = useTranslation(['common', 'home']);
+  const { t } = useTranslation(['common', 'contact']);
 
   return (
     <>
@@ -27,11 +28,10 @@ const Home: NextPage = () => {
 
           <section className="py-10 sm:py-20 px-6">
             <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
-              <h1 className="font-medium">Contact us</h1>
-              <h2 className="mt-2 text-4xl">Have a question for us? We&apos;ll get back to you as soon as possible.</h2>
+              <h1 className="font-medium text-dielle">{t('contact:title1')}</h1>
+              <h2 className="mt-2 text-4xl">{t('contact:title2')}</h2>
               <p className="mt-4 font-light">
-                If you need a quote, you just want to lean more about our solutions or for any question
-                please compile the form below, our team of expert will take care of you.
+                {t('contact:desc')}
               </p>
 
               <div className="mt-8 flex items-center hover:opacity-80">
@@ -51,18 +51,21 @@ const Home: NextPage = () => {
 
               <form className="mt-10 w-full space-y-4 sm:space-y-5">
                 <div className="sm:flex w-full space-y-4 sm:space-x-5 sm:space-y-0">
-                  <input className={inputClasses} type="text" placeholder='First name' />
-                  <input className={inputClasses} type="text" placeholder='Last name' />
+                  <input className={inputClasses} type="text" placeholder={t('contact:form:firstName')} />
+                  <input className={inputClasses} type="text" placeholder={t('contact:form:lastName')} />
                 </div>
                 <div className="sm:flex w-full space-y-4 sm:space-x-5 sm:space-y-0">
-                  <input className={inputClasses} type="text" placeholder='Email' />
-                  <input className={inputClasses} type="text" placeholder='Phone number (optional)' />
+                  <input className={inputClasses} type="text" placeholder={t('contact:form:email')} />
+                  <input className={inputClasses} type="text" placeholder={t('contact:form:phoneNumber')} />
                 </div>
-                <textarea rows={5} className={inputClasses} placeholder="What are you looking for?"></textarea>
+                <textarea rows={5} className={inputClasses} placeholder={t('contact:form:text')}></textarea>
 
                 <div className="flex space-x-2">
                   <input type="checkbox" className="accent-dielle cursor-pointer"></input>
-                  <p className="font-light text-sm">I accept the privacy policy</p>
+                  <p className="font-light text-sm">
+                    {t('contact:form:privacy1')}{' '}
+                    <Link href="/privacy"><a target="_blank" className="text-dielle font-medium">{t('contact:form:privacy2')}</a></Link>.
+                  </p>
                 </div>
 
                 <Button size="lg" className="!w-full">Submit</Button>
@@ -80,6 +83,6 @@ const Home: NextPage = () => {
 
 export default Home;
 
-const getStaticProps = makeStaticProps(['common', 'head', 'header', 'home',]);
+const getStaticProps = makeStaticProps(['common', 'head', 'header', 'contact',]);
 export { getStaticPaths, getStaticProps };
 

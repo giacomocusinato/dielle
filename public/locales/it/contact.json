@@ -1,0 +1,15 @@
+{
+  "title1": "Contatti",
+  "title2": "Hai una domanda? Cerchiamo di risponderti il prima possibile.",
+  "desc": "Se ti serve un preventivo, vuoi più informazioni sulle nostre soluzioni o qualsiasi altro dubbio compila la form qui sotto, il nostro team ti assisterà per ogni esigenza.",
+  "form": {
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "email": "Email",
+    "phoneNumber": "Telefono (opzionale)",
+    "text": "Cosa stai cercando?",
+    "privacy1": "Accetto la",
+    "privacy2": "privacy policy",
+    "submit": "Invia"
+  }
+}

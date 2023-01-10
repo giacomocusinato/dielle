@@ -1,0 +1,15 @@
+{
+  "title1": "Contact us",
+  "title2": "Have a question for us? We'll get back to you as soon as possible.",
+  "desc": "If you need a quote, to learn more about our solutions or for any question please compile the form below, our team of expert will take care of you.",
+  "form": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "phoneNumber": "Phone number (optional)",
+    "text": "What are you looking for?",
+    "privacy1": "I accept the",
+    "privacy2": "privacy policy",
+    "submit": "Submit"
+  }
+}
