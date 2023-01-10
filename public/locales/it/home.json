@@ -1,35 +1,47 @@
 {
+  "hero": "<h>Dielle</h> da oltre 30 anni opera nel settore dell'<h>automazione industriale</h> progettando e realizzando <h>quadri elettrici</h> e <h>software industriale</h>. La nostra esperienza ci ha portato a collaborare con importanti realtà nazionali ed estere operanti nei settori più vari, dall'alimentare al metalmeccanico.",
   "showMore": "Mostra altro",
   "services": {
-    "title1": "Le nostre",
-    "title2": "soluzioni",
-    "panels": "Pannelli elettrici",
-    "panelsDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "title": "Le nostre <h>soluzioni</h>",
+    "panels": "Quadri elettrici",
+    "panelsDesc": "Realizziamo quadri elettrici di automazione su progettazione interna o del cliente. La nostra struttura ci permette di realizzare quadri complessi di grandi dimensioni in linea con le norme uropee (CE) e nord-americane (UL/CSA).",
     "software": "Software industriale",
-    "softwareDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
-    "design": "Progettazione",
-    "designDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "softwareDesc": "Sviluppiamo software PLC e SCADA su una vasta gamma di ambienti tra cui Siemes, Allen-Bradley e Danfoss. I software sono realizzati dopo un'attenta analisi dell'impianto e del suo processo produttivo al fine di combinare massima efficenza, funzionalità e affidabilità.",
     "onboard": "Impianti bordomacchina",
-    "onboardDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "onboardDesc": "I nostri tecnici altamente qualificati eseguono le attività di bordo macchina e integrazione lavorando a stretto contatto col personale del cliente al fine di garantire la migliore integrazione dell'impianto.",
     "robotic": "Robotica",
-    "roboticDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta."
+    "roboticDesc": "Per realizzare impianti sempre più efficenti e performanti abbiamo esteso le nostre competenze nell'ambito dei robot sia antropomorfi che collaborativi garantendo ai nostri clienti un servizio più completo."
   },
   "industries": {
-    "title1": "I nostri",
-    "title2": "settori",
+    "title": "I nostri <h>settori</h>",
     "food": "Alimentare",
-    "foodDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "foodDesc": "Da 30 anni lavoriamo nel settore alimentare supportando i nostri clienti nella realizzazione di linee per la produzione di pasta fresca, pasta secca e snack. I nostri sistemi forniscono un controllo ottimale su tutti i parametri della linea grazie ai nostri software intuitivi e specifici per il settore.",
     "packaging": "Imballaggio",
-    "packagingDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "packagingDesc": "Ci occupiamo della messa a punto di impianti dedicati al packaging, in particolare di stazioni di incartonamento automatico, fornendo controlli automatizzati su tutta la linea.",
     "boat": "Boat lifting",
-    "boatDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "boatDesc": "Abbiamo esperienza nella relizzazione di impianti e software per la gestione di macchine dedicate alla la movimentazione di imbarcazioni e carichi pesanti supportando il cliente dalla progettazione al collaudo.",
     "marble": "Lavorazione del marmo",
-    "marbleDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.",
+    "marbleDesc": "Collaboriamo con aziende leader nella produzione di macchine e impianti industriali per la lavorazione della pietra. Contribuiamo fornendo un valore aggiunto grazie all'impiego esclusivo dipersonale specializzato nella progettazione e nell'assistenza nei prodotti del settore.",
     "metal": "Metalmeccanico",
-    "metalDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta."
+    "metalDesc": "Da anni realizziamo sistemi di automazione per importanti aziende operanti nel settore meccanico, aerospaziale e nella lavorazioni di utensili."
+  },
+  "traits": {
+    "title": "Su di <h>noi</h>",
+    "cert": "Certificazione UL/CSA",
+    "certDesc": "Le certificazioni UL e CSA attestano la conformità dei prodotti che lo richiedono ai requisiti di sicurezza USA e Canadesi. \n La nostra decennale esperienza di collaborazione col mercato nord americano ci permette di garantire la realizzazione di quadri elettrici pienamente conformi alla normative vigenti.",
+    "support": "Supporto cliente",
+    "supportDesc": "Garantiamo ai nostri clienti la massima assistenza sia durante la realizzazione dell'impianto che al termine della stessa. \n Il nostro personale tecnico offre un iniziale supporto da remoto e, quando richiesto, effettua i necessari interventi di manutenzione presso la sede del cliente.",
+    "industry4": "Industria 4.0",
+    "industry4Desc": "Realizziamo i nostri sistemi di controllo in linea con l'industria 4.0 consentendo integrazioni con servizi esterni per la raccolta dei dati necessari al controllo e la gestione efficiente del processo."
   },
   "partners": {
-    "title1": "I nostri",
-    "title2": "partner"
+    "title": "I nostri <h>partner</h>"
+  },
+  "contact": {
+    "title": "<h>Lavora</h> con noi",
+    "work": "Siamo sempre alla ricerca di nuovo personale qualificato.\n Vuoi far parte del nostro team? Consulta le posizione aperte ed inviaci il tuo CV.",
+    "workBtn": "Vedi posizioni aperte",
+    "contact": "Qualche dubbio o richiesta specifica? Contattaci tramite la apposita form.\n Il nostro personale risponderà ad ogni vostra domanda e vi indicherà la soluzione più adeguata al vostro bisogno.",
+    "contactBtn": "Contattaci"
   }
 }

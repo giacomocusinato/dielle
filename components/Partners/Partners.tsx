@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames';
 import { useTranslation } from 'next-i18next';
 import { withFadeInContent } from '../FadeInContent';
+import { BrandTrans } from '../BrandTrans/BrandTrans';
 
 const partners = [
   { name: 'ABB', src: '/partners/abb.svg', customClass: 'max-w-[150px]' },
@@ -24,7 +25,7 @@ export const _Partners = () => {
     <section id="partners">
       <div className="container py-10 sm:py-20">
         <h2 className="mb-10 sm:mb-16 text-4xl text-medium text-center">
-          {t('partners.title1')} <span className="text-dielle">{t('home:partners.title2')}</span>
+          <BrandTrans i18nKey="home:partners.title" />
         </h2>
 
         <div className="flex flex-wrap items-center justify-evenly gap-2 sm:gap-6">

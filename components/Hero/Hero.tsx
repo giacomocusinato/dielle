@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { PlusIcon } from '@heroicons/react/solid';
 import { HeroLogo } from '../HeroLogo';
+import { BrandTrans } from '../BrandTrans/BrandTrans';
 
 export const Hero = () => {
   const [showMore, setShowMore] = useState(false);
@@ -26,8 +27,7 @@ export const Hero = () => {
 
       <section className="container mx-auto py-10 sm:py-20 px-8 xl:px-40">
         <p className="text-4xl">
-          <span className="text-dielle">Lorem Ipsum</span> dolor sit amet consectetur adipisicing elit.
-          Ullam voluptatem ipsum repudiandae sint accusamus deserunt, vitae rem natus enim reprehenderit cumque dolores necessitatibus commodi soluta alias dicta tempore ipsa ab.
+          <BrandTrans i18nKey="home:hero" />
         </p>
         {showMore ? <p className="mt-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero numquam expedita, labore ipsam ratione minus eum cumque optio at inventore error fugiat provident commodi? Necessitatibus exercitationem laborum animi officia inventore.

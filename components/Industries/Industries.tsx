@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import { Button } from '../Button';
 import { withFadeInContent } from '../FadeInContent';
+import { BrandTrans } from '../BrandTrans/BrandTrans';
 
 type IndustryItemProps = {
   img: string;
@@ -28,7 +29,7 @@ const _Industries = () => {
     <section id="industries">
       <div className="py-10 sm:py-20">
         <h2 className="mb-10 sm:mb-16 text-4xl text-medium text-center">
-          {t('industries.title1')} <span className="text-dielle">{t('home:industries.title2')}</span>
+          <BrandTrans i18nKey="home:industries:title" />
         </h2>
 
         <div className="container">

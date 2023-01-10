@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import { Button } from '../Button';
 import { withFadeInContent } from '../FadeInContent';
+import { BrandTrans } from '../BrandTrans/BrandTrans';
 
 type SolutionItemProps = {
   title: string;
@@ -27,7 +28,7 @@ const _Solutions = () => {
     <section id="solutions" className="relative" >
       <div className="py-10 sm:py-20">
         <h2 className="mb-10 sm:mb-16 text-4xl text-medium text-center">
-          <span className="text-dielle">{t('home:services.title1')}</span> {t('services.title2')}
+          <BrandTrans i18nKey="home:services:title" />
         </h2>
 
         <div className="container">
