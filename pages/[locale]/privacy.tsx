@@ -1,19 +1,17 @@
 import type { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { Head } from '../../components/Head';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
+import { PageLayout } from '../../components/PageLayout';
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
 
 const Privacy: NextPage = () => {
   const { t } = useTranslation(['common', 'head', 'header']);
 
   return (
-    <>
+    <PageLayout>
       <Head>
         <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
       </Head>
-      <Header />
 
       <div className="absolute bg-dielle opacity-20 w-full h-[450px] -z-10"></div>
 
@@ -29,8 +27,7 @@ const Privacy: NextPage = () => {
         </div>
       </section>
 
-      <Footer />
-    </>
+    </PageLayout>
   )
 }
 

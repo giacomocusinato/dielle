@@ -1,49 +1,39 @@
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
-import { getI18nPaths, getI18nProps } from '../../../lib/getStatic'
-import { Head } from '../../../components/Head';
-import { Header } from '../../../components/Header';
-import { Footer } from '../../../components/Footer';
-import { Button } from '../../../components/Button';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 import fs from 'fs';
+import { Head } from '../../../components/Head';
+import { PageLayout } from '../../../components/PageLayout';
+import { Button } from '../../../components/Button';
+import { getI18nPaths, getI18nProps } from '../../../lib/getStatic'
 
 const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ job }) => {
   const { t } = useTranslation(['jobs']);
 
   return (
-    <>
+    <PageLayout>
       <Head>
         <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
       </Head>
 
-      <div className="flex flex-col h-screen">
-        <Header />
+      <div className="absolute bg-dielle opacity-20 w-full h-[450px] -z-10"></div>
 
-        <div className="relative flex-1">
+      <section className="py-10 sm:py-20 px-6">
+        <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
+          <h1 className="font-medium text-dielle">{t('jobs:title1')}</h1>
+          <h2 className="mt-2 text-4xl">{job.data.title}</h2>
 
-          <div className="absolute bg-dielle opacity-20 w-full h-[450px] -z-10"></div>
+          <div
+            className="markdown font-light"
+            dangerouslySetInnerHTML={{ __html: job.content }}
+          />
 
-          <section className="py-10 sm:py-20 px-6">
-            <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
-              <h1 className="font-medium text-dielle">{t('jobs:title1')}</h1>
-              <h2 className="mt-2 text-4xl">{job.data.title}</h2>
+          <Button className="!w-full mt-8" size="lg" href={`mailto:${t('companyEmail')}`}>Invia il CV</Button>
 
-              <div
-                className="markdown font-light"
-                dangerouslySetInnerHTML={{ __html: job.content }}
-              />
-
-              <Button className="!w-full mt-8" size="lg" href={`mailto:${t('companyEmail')}`}>Invia il CV</Button>
-
-            </div>
-          </section>
         </div>
-
-        <Footer />
-      </div>
-    </>
+      </section>
+    </PageLayout>
   )
 }
 
