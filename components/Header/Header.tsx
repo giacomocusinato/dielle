@@ -4,17 +4,22 @@ import { useTranslation } from 'next-i18next';
 import classNames from 'classnames';
 import { LanguagePicker } from '../LanguagePicker';
 import { Button } from '../Button';
+import { useRouter } from 'next/router';
 
 const HeaderLink: React.FC<{ to: string, translateKey: string }> = ({ to, translateKey }) => {
   const { t } = useTranslation(['header']);
+  const router = useRouter();
 
   return (
     <li key={translateKey}>
       <Link href={to}>
-        <a className="flex items-center text-lg text-semibold hover:text-dielle focus:text-dielle">
+        <a className={classNames(
+          'flex items-center text-lg text-semibold hover:text-dielle focus:text-dielle',
+          { 'text-dielle': router.pathname.includes(translateKey) }
+        )}>
           {t(`header:links.${translateKey}`)}
           {translateKey === 'jobs' && (
-            <span className="bg-dielle p-1 ml-1 text-[10px] leading-[10px] uppercase text-white rounded-sm">
+            <span className="hidden md:inline bg-dielle p-1 ml-1 text-[10px] leading-[10px] uppercase text-white rounded-sm">
               Hiring
             </span>
           )}
@@ -28,24 +33,23 @@ const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
   const { t } = useTranslation(['header']);
 
   return (
-    <>
-      <div className="container w-full h-full flex justify-between items-center text-black" >
-        <a onClick={() => (window.location.href = '/')}>
-          <h1 className="font-avenir h-[27px] text-2xl uppercase font-semibold tracking-[2px]">Dielle</h1>
-        </a>
-        <ul className="space-x-4 hidden sm:flex">
-          <HeaderLink to="/" translateKey="home" />
-          <HeaderLink to="/solutions" translateKey="solutions" />
-          <HeaderLink to="/industries" translateKey="industries" />
-          <HeaderLink to="/jobs" translateKey="jobs" />
-        </ul>
+    <div className="container relative w-full h-full flex justify-between items-center text-black">
+      <a onClick={() => (window.location.href = '/')} className="z-10">
+        <h1 className="font-avenir h-[27px] text-2xl uppercase font-semibold tracking-[2px] cursor-pointer">
+          Dielle
+        </h1>
+      </a>
+      <ul className="space-x-4 hidden sm:flex absolute inset-0 justify-center items-center">
+        <HeaderLink to="/" translateKey="home" />
+        <HeaderLink to="/solutions" translateKey="solutions" />
+        <HeaderLink to="/jobs" translateKey="jobs" />
+      </ul>
 
-        <div className="flex items-center space-x-4">
-          <LanguagePicker key={isSticky + ''} />
-          <Button rounded stroked size="md" href="/contact">Contact</Button>
-        </div>
+      <div className="flex items-center space-x-4 z-10">
+        <LanguagePicker key={isSticky + ''} />
+        <Button rounded stroked size="md" href="/contact">Contact</Button>
       </div>
-    </>
+    </div>
   )
 }
 
