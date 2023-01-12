@@ -5,6 +5,7 @@ import md from 'markdown-it';
 import fs from 'fs';
 import { Head } from '../../../components/Head';
 import { PageLayout } from '../../../components/PageLayout';
+import { PageHeader } from '../../../components/PageHeader';
 import { Button } from '../../../components/Button';
 import { getI18nPaths, getI18nProps } from '../../../lib/getStatic'
 
@@ -17,9 +18,9 @@ const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ job }) 
         <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
       </Head>
 
-      <div className="absolute bg-dielle opacity-20 w-full h-[450px] -z-10"></div>
+      <PageHeader imgSrc="/jobs.jpg" imgPosition={20} />
 
-      <section className="py-10 sm:py-20 px-6">
+      <section className="-mt-40 px-6">
         <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
           <h1 className="font-medium text-dielle">{t('jobs:title1')}</h1>
           <h2 className="mt-2 text-4xl">{job.data.title}</h2>

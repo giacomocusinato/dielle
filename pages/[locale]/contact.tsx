@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { LocationMarkerIcon, MailIcon } from "@heroicons/react/solid";
+import Link from 'next/link';
 import { Head } from '../../components/Head';
 import { PageLayout } from '../../components/PageLayout';
-import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
+import { PageHeader } from '../../components/PageHeader';
 import { Button } from '../../components/Button';
-import Link from 'next/link';
+import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
 
 const inputClasses = 'py-3 px-4 w-full outline outline-1 outline-gray-300 focus:outline-dielle rounded-sm';
 
@@ -18,9 +19,9 @@ const Home: NextPage = () => {
         <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
       </Head>
 
-      <div className="absolute bg-dielle opacity-20 w-full h-[450px] -z-10"></div>
+      <PageHeader imgSrc="/contact.jpg" imgPosition={60} />
 
-      <section className="py-10 sm:py-20 px-6">
+      <section className="-mt-40 px-6">
         <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
           <h1 className="font-medium text-dielle">{t('contact:title1')}</h1>
           <h2 className="mt-2 text-4xl">{t('contact:title2')}</h2>
