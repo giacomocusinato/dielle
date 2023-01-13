@@ -57,10 +57,6 @@ const _Industries = () => {
               title={t('home:industries.metal')}
               description={t('home:industries.metalDesc')} />
           </div>
-          <Button className="mt-10" rounded stroked size="md" href="/contact">
-            Scopri di più
-            <ArrowRightIcon className="w-5 ml-4" />
-          </Button>
         </div>
       </div>
     </section>
