@@ -13,6 +13,13 @@ function Document(props: DocumentProps) {
         <link rel="icon" href="/favicon.svg" />
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css" />
         <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/avenir-next-lt-pro" />
+        <meta
+          name="description"
+          content="Dielle Impianti da oltre 30 anni opera nel settore dell'automazione industriale realizzando quadri elettrici e software industriale."
+          key="desc"
+        />
+        <meta name="keywords" content="automazioni industriali,quadri elettrici,software,plc,automations" />
+        <meta name="author" content="Dielle S.r.l" />
       </Head>
       <body>
         <Main />
