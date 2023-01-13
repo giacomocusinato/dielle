@@ -3,9 +3,10 @@ import classNames from 'classnames';
 
 type FadeInContentProps = {
   children?: React.ReactNode
+  delay?: number;
 };
 
-export const FadeInContent: React.FC<FadeInContentProps> = ({ children }) => {
+export const FadeInContent: React.FC<FadeInContentProps> = ({ children, delay = 0 }) => {
   const domRef = React.useRef<HTMLDivElement>(null);
 
   const [isVisible, setVisible] = React.useState(false);
@@ -14,13 +15,13 @@ export const FadeInContent: React.FC<FadeInContentProps> = ({ children }) => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
 
-        setVisible(true);
+        setTimeout(() => setVisible(true), delay);
 
         if (domRef.current) {
           observer.unobserve(domRef.current);
         }
       }
-    }, { threshold: 0.3 });
+    }, { threshold: 0.12 });
 
     if (domRef.current) {
       observer.observe(domRef.current);
