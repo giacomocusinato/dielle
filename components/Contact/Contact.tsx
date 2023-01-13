@@ -16,8 +16,8 @@ export const _Contact = () => {
         </h2>
 
         <div className="flex justify-center">
-          <img src="cables2.jpg" className="w-[450px] mr-8" />
-          <div className="max-w-[600px] mt-12 sm:mt-0 ">
+          <img src="cables2.jpg" className="hidden sm:block w-[450px] mr-8" />
+          <div className="max-w-[600px] ">
 
             <p className="my-4 whitespace-pre-line">
               {t('home:contact:work')}

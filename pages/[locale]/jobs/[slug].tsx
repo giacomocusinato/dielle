@@ -20,10 +20,10 @@ const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ job }) 
 
       <PageHeader imgSrc="/jobs.jpg" imgPosition={20} />
 
-      <section className="-mt-40 px-6">
+      <section className="-mt-60 sm:-mt-40 px-6">
         <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
           <h1 className="font-medium text-dielle">{t('jobs:title1')}</h1>
-          <h2 className="mt-2 text-4xl">{job.data.title}</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl">{job.data.title}</h2>
 
           <div
             className="markdown font-light"

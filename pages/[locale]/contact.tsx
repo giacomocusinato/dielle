@@ -23,10 +23,10 @@ const Home: NextPage = () => {
 
       <PageHeader imgSrc="/contact.jpg" imgPosition={60} />
 
-      <section className="-mt-40 px-6">
+      <section className="-mt-60 sm:-mt-40 px-6">
         <div className="mx-auto p-6 sm:p-12 max-w-[750px] bg-white border border-gray-300 rounded-sm">
           <h1 className="font-medium text-dielle">{t('contact:title1')}</h1>
-          <h2 className="mt-2 text-4xl">{t('contact:title2')}</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl">{t('contact:title2')}</h2>
           <p className="mt-4 font-light">
             {t('contact:desc')}
           </p>

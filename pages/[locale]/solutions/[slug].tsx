@@ -27,16 +27,16 @@ const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ slug, l
 
       <PageHeader imgSrc="/solutions.jpg" imgPosition={20} title={t('solutions:title')} />
 
-      <section className="container">
+      <section className="container my-8 sm:my-16">
 
-        <div className="flex mt-16">
+        <div className="flex flex-col sm:flex-row">
 
-          <div className="w-[320px] mr-[80px] flex-shrink-0 mt-14">
+          <div className="w-full sm:w-[220px] lg:w-[320px] sm:mr-[40px] lg:mr-[80px] flex-shrink-0 my-8 sm:mt-14">
             {solutions.map((item) => (
               <Link href={`/${locale}/solutions/${item.slug}`} key={item.translateKey}>
-                <a className="block group py-6 px-2 border-b border-b-gray-300 ">
+                <a className="block group py-3 sm:py-6 px-2 border-b border-b-gray-300 ">
                   <div className={classNames(
-                    'text-xl font-medium ',
+                    'text-lg lg:text-xl font-medium ',
                     'group-active:text-dielle group-hover:text-dielle',
                     item.slug === slug ? 'text-dielle' : 'text-gray-700',
                   )}>
@@ -47,7 +47,7 @@ const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ slug, l
             ))}
           </div>
 
-          <div className="flex-auto">
+          <div className="flex-auto mt-8 sm:mt-0">
             <h2 className="text-2xl mb-6">{t(`solutions:${currKey}`)}</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sed enim.
