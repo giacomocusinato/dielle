@@ -303,6 +303,6 @@ const NotFound: NextPage = () => {
 
 export default NotFound;
 
-const getStaticProps = makeStaticProps(['common', 'head', 'header', '404',]);
+const getStaticProps = makeStaticProps(['common', 'head', 'header', 'footer',]);
 export { getStaticPaths, getStaticProps };
 

@@ -79,7 +79,7 @@ export default Job;
 const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params?.slug as string;
 
-  const translateProps = await getI18nProps(ctx, ['common', 'head', 'header', 'solutions']);
+  const translateProps = await getI18nProps(ctx, ['common', 'head', 'header', 'footer', 'solutions']);
   const locale = translateProps._nextI18Next.initialLocale;
 
   return {

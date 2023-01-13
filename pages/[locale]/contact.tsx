@@ -77,6 +77,6 @@ const Home: NextPage = () => {
 
 export default Home;
 
-const getStaticProps = makeStaticProps(['common', 'head', 'header', 'contact',]);
+const getStaticProps = makeStaticProps(['common', 'head', 'header', 'footer', 'contact',]);
 export { getStaticPaths, getStaticProps };
 

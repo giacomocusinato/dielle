@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 export const Footer = () => {
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation(['common', 'footer']);
+  const router = useRouter();
 
   return (
     <footer className="bg-gray-100 mt-10 sm:mt-20">
@@ -22,24 +24,23 @@ export const Footer = () => {
               Galliera Veneta, PD <br />
               35015, Italy
             </p>
-            <h3 className="mt-2 font-medium">Partita IVA</h3>
+            <h3 className="mt-2 font-medium">{t('footer:vatNumber')}</h3>
             <p>02474770282</p>
           </div>
 
           <div>
-            <h3 className="font-medium">Azienda</h3>
+            <h3 className="font-medium">{t('footer:aboutUs')}</h3>
             <ul>
               <li>
-                <Link href="/">
+                <Link href={`/${router.query.locale}`}>
                   <a
-
                     className="hover:text-dielle focus:text-dielle">
                     {t('header:links.home')}
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/solutions">
+                <Link href={`/${router.query.locale}/jobs`}>
                   <a
 
                     className="hover:text-dielle focus:text-dielle">
@@ -48,18 +49,8 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/industries">
+                <Link href={`/${router.query.locale}/jobs`}>
                   <a
-
-                    className="hover:text-dielle focus:text-dielle">
-                    {t('header:links.industries')}
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/jobs">
-                  <a
-
                     className="hover:text-dielle focus:text-dielle flex items-center">
                     {t('header:links.jobs')}
                     <span className="bg-dielle p-1 ml-1 h-fit text-[10px] leading-[10px] uppercase text-white rounded-sm">
@@ -69,9 +60,8 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contacts">
+                <Link href={`/${router.query.locale}/contact`}>
                   <a
-
                     className="hover:text-dielle focus:text-dielle">
                     {t('header:links.contacts')}
                   </a>
@@ -82,7 +72,7 @@ export const Footer = () => {
 
 
           <div>
-            <h3 className="font-medium">Contatti</h3>
+            <h3 className="font-medium">{t('footer:contacts')}</h3>
             <ul>
               <li>
                 Email: <a className="underline hover:text-dielle font-light" href={`mailto:${t('companyEmail')}`}>{t('companyEmail')}</a>
@@ -102,8 +92,18 @@ export const Footer = () => {
 
         <hr className="block my-5" />
 
-        <div>
-          &#169; {t('companyLegalName')} {new Date().getFullYear()}. All Rights Reserved.
+        <div className="flex items-center justify-between text-sm">
+          <div>&#169; {t('companyLegalName')} {new Date().getFullYear()}. All Rights Reserved.</div>
+
+          <div className="font-light">
+            <Link href="/privacy">
+              <a className="underline hover:text-dielle">Privacy policy</a>
+            </Link>
+            {' | '}
+            <Link href="/cookie">
+              <a className="underline hover:text-dielle">Cookie policy</a>
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
