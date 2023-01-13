@@ -12,7 +12,7 @@ const HeaderLink: React.FC<{ to: string, translateKey: string }> = ({ to, transl
 
   return (
     <li key={translateKey}>
-      <Link href={to}>
+      <Link href={`/${router.query.locale}${to}`}>
         <a className={classNames(
           'flex items-center text-lg text-semibold hover:text-dielle focus:text-dielle',
           { 'text-dielle': router.pathname.includes(translateKey) }
@@ -30,13 +30,14 @@ const HeaderLink: React.FC<{ to: string, translateKey: string }> = ({ to, transl
 }
 
 const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
-  const { t } = useTranslation(['header']);
+  const { t } = useTranslation(['common', 'header']);
+  const router = useRouter();
 
   return (
     <div className="container relative w-full h-full flex justify-between items-center text-black">
       <a onClick={() => (window.location.href = '/')} className="z-10">
         <h1 className="font-avenir h-[27px] text-2xl uppercase font-semibold tracking-[2px] cursor-pointer">
-          Dielle
+          {t('companyName')}
         </h1>
       </a>
       <ul className="space-x-4 hidden sm:flex absolute inset-0 justify-center items-center">
@@ -47,7 +48,7 @@ const HeaderContent: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
 
       <div className="flex items-center space-x-4 z-10">
         <LanguagePicker key={isSticky + ''} />
-        <Button rounded stroked size="md" href="/contact">Contact</Button>
+        <Button rounded stroked size="md" href={`/${router.query.locale}/contact`}>Contact</Button>
       </div>
     </div>
   )

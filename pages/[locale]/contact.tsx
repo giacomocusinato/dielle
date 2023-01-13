@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
-import { LocationMarkerIcon, MailIcon } from "@heroicons/react/solid";
+import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { LocationMarkerIcon, MailIcon } from "@heroicons/react/solid";
 import { Head } from '../../components/Head';
 import { PageLayout } from '../../components/PageLayout';
 import { PageHeader } from '../../components/PageHeader';
@@ -12,6 +13,7 @@ const inputClasses = 'py-3 px-4 w-full outline outline-1 outline-gray-300 focus:
 
 const Home: NextPage = () => {
   const { t } = useTranslation(['common', 'contact']);
+  const router = useRouter();
 
   return (
     <PageLayout>
@@ -59,7 +61,9 @@ const Home: NextPage = () => {
               <input type="checkbox" className="accent-dielle cursor-pointer"></input>
               <p className="font-light text-sm">
                 {t('contact:form:privacy1')}{' '}
-                <Link href="/privacy"><a target="_blank" className="text-dielle font-medium">{t('contact:form:privacy2')}</a></Link>.
+                <Link href={`/${router.query.locale}/privacy`}>
+                  <a target="_blank" className="text-dielle font-medium">{t('contact:form:privacy2')}</a>
+                </Link>.
               </p>
             </div>
 

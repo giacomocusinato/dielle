@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useRouter } from 'next/router';
 import { Listbox, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid';
@@ -15,25 +14,22 @@ const langs = [
 export const LanguagePicker = () => {
   const router = useRouter();
   const locale = router.query.locale as string || nextI18nextConfig.i18n.defaultLocale;
-  const [selectedLang, setSelectedLang] = useState(langs.find((l) => l.locale === locale));
+  const currLang = langs.find((l) => l.locale === locale);
 
   return (
     <Listbox
       as="div"
       className="z-10"
-      value={selectedLang?.locale}
-      onChange={(locale: string) => {
-        languageDetector.cache && languageDetector.cache(locale);
-        setSelectedLang(langs.find((l) => l.locale === locale));
-      }}>
+      value={currLang?.locale}
+      onChange={() => { }}>
       {({ open }) => (
         <div className="relative w-fit">
           <Listbox.Button className={classNames(
             'flex items-center justify-end p-2 box-border w-fit focus:outline focus:outline-1 focus:outline-gray-200',
             { 'outline outline-1 outline-gray-200 bg-white/80 backdrop-blur-[3px]': open }
           )}>
-            <img src={selectedLang?.flag} className="mr-2 w-5 h-5" />
-            <span className="font-medium text-xl uppercase w-[25px]">{selectedLang?.locale}</span>
+            <img src={currLang?.flag} className="mr-2 w-5 h-5" />
+            <span className="font-medium text-xl uppercase w-[25px]">{currLang?.locale}</span>
             <ChevronDownIcon className="w-5 h-5 text-dielle text-xl uppercase" />
           </Listbox.Button>
           <Transition
@@ -47,11 +43,11 @@ export const LanguagePicker = () => {
             leaveTo="transform scale-95 opacity-0"
           >
             <Listbox.Options static className="outline outline-1 outline-gray-200 focus:outline focus:outline-1 focus:outline-gray-200">
-              {langs.filter((l) => l.locale !== selectedLang?.locale).map((lang) => (
+              {langs.filter((l) => l.locale !== currLang?.locale).map((lang) => (
                 <Listbox.Option key={lang.locale} value={lang.locale}>
                   {({ active, selected }) => (
                     <Link locale={lang.locale}>
-                      <a>
+                      <a onClick={() => { languageDetector.cache && languageDetector.cache(lang.locale); router.locale = lang.locale; }}>
                         <div className={`flex items-center p-2 cursor-pointer ${active || selected ? 'bg-gray-100' : ''}`}>
                           <img src={lang?.flag} className="mr-2 w-5 h-5" />
                           <span className="font-medium text-xl uppercase w-[25px]">{lang?.locale}</span>
@@ -64,7 +60,8 @@ export const LanguagePicker = () => {
             </Listbox.Options>
           </Transition>
         </div>
-      )}
-    </Listbox>
+      )
+      }
+    </Listbox >
   )
 }

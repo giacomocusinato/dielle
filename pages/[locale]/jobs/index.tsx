@@ -2,6 +2,7 @@ import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { ArrowRightIcon } from "@heroicons/react/solid";
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import matter from 'gray-matter';
 import fs from 'fs';
 import { Head } from '../../../components/Head';
@@ -12,6 +13,7 @@ import { getI18nProps, getStaticPaths } from '../../../lib/getStatic'
 
 const Jobs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ jobs }) => {
   const { t } = useTranslation(['common', 'home', 'jobs']);
+  const router = useRouter();
 
   return (
     <PageLayout>
@@ -31,7 +33,7 @@ const Jobs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ jobs }
 
           <div className="flex flex-col space-y-4 my-8">
             {jobs.map(({ slug, data }: any) => (
-              <Link href={`/jobs/${slug}`} key={slug}>
+              <Link href={`/${router.query.locale}/jobs/${slug}`} key={slug}>
                 <a>
                   <div className="flex items-center justify-between border border-gray-200 p-3">
                     <h3 className="text-dielle font-semibold">{data.title}</h3>

@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next'
 import { Head } from '../../components/Head';
 import { PageLayout } from '../../components/PageLayout';
@@ -8,6 +9,7 @@ import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
 
 const NotFound: NextPage = () => {
   const { t } = useTranslation(['common', '404']);
+  const router = useRouter();
 
   return (
     <PageLayout>
@@ -24,7 +26,7 @@ const NotFound: NextPage = () => {
           <BrandTrans i18nKey="404:message"></BrandTrans>
         </h2>
 
-        <Button href="/" size="lg" className="mt-10">{t('404:backHome')}</Button>
+        <Button href={`/${router.query.locale}/`} size="lg" className="mt-10">{t('404:backHome')}</Button>
       </section>
     </PageLayout >
   )

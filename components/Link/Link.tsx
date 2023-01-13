@@ -6,14 +6,14 @@ import { Url } from 'url';
 export const Link: React.FC<Omit<LinkProps, 'href'> & { children: React.ReactNode, href?: Url }> = ({ children, ...rest }) => {
   const router = useRouter()
   const locale = rest.locale || (router.query.locale as string) || '';
-
-  const href = rest.href
-    ? `/${locale}${rest.href}`
-    : router.pathname.replace('[locale]', locale);
+  const { locale: l, ...query } = router.query;
 
   return (
     <>
-      <NextLink {...rest} href={href}>
+      <NextLink
+        {...rest}
+        href={{ pathname: router.pathname, query: { ...query, locale } }}
+        locale={locale}>
         {children}
       </NextLink>
     </>

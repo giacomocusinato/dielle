@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import { Button } from '../Button';
@@ -23,6 +24,7 @@ const SolutionItem: React.FC<SolutionItemProps> = (props: SolutionItemProps) => 
 
 const _Solutions = () => {
   const { t } = useTranslation(['home']);
+  const router = useRouter();
 
   return (
     <section id="solutions" className="relative" >
@@ -50,7 +52,7 @@ const _Solutions = () => {
               title={t('home:services.robotic')}
               description={t('home:services.roboticDesc')} />
           </div>
-          <Button className="mt-10" rounded stroked size="md" href="/contact">
+          <Button className="mt-10" rounded stroked size="md" href={`/${router.query.locale}/solutions`}>
             Scopri di più
             <ArrowRightIcon className="w-5 ml-4" />
           </Button>
