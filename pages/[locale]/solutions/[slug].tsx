@@ -22,7 +22,7 @@ const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ slug, l
   return (
     <PageLayout>
       <Head>
-        <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
+        <title>{t(`solutions:${currKey}`)} - {`${t('companyName')}`}</title>
       </Head>
 
       <PageHeader imgSrc="/solutions.jpg" imgPosition={20} title={t('solutions:title')} />

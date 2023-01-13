@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <PageLayout>
       <Head>
-        <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
+        <title>{`${t('companyName')} | ${t('companyMotto')}`}</title>
       </Head>
 
       <Hero />

@@ -14,7 +14,7 @@ const NotFound: NextPage = () => {
   return (
     <PageLayout>
       <Head>
-        <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
+        <title>{`${t('404:notFound')} - ${t('companyName')}`}</title>
       </Head>
 
       <hr />

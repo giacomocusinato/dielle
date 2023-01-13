@@ -13,7 +13,7 @@ const NotFound: NextPage = () => {
   return (
     <PageLayout>
       <Head>
-        <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
+        <title>{`Privacy Policy - ${t('companyName')}`}</title>
       </Head>
 
       <PageHeader imgSrc="/policy.jpg" imgPosition={40} title="Privacy policy"></PageHeader>

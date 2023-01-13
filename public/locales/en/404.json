@@ -1,4 +1,5 @@
 {
+  "notFound": "Page not found",
   "message": "<h>Oops!</h> The page you're looking for doesn't exists!",
   "backHome": "Go back home"
 }

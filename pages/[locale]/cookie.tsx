@@ -13,7 +13,7 @@ const NotFound: NextPage = () => {
   return (
     <PageLayout>
       <Head>
-        <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
+        <title>{`Cookie Policy - ${t('companyName')}`}</title>
       </Head>
 
       <PageHeader imgSrc="/contact.jpg" imgPosition={60} title="Cookie policy"></PageHeader>

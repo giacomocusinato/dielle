@@ -18,7 +18,7 @@ const Jobs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ jobs }
   return (
     <PageLayout>
       <Head>
-        <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
+        <title>{`${t('jobs:title1')} - ${t('companyName')}`}</title>
       </Head>
 
       <PageHeader imgSrc="/jobs.jpg" imgPosition={20} />

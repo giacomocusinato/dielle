@@ -10,12 +10,12 @@ import { Button } from '../../../components/Button';
 import { getI18nPaths, getI18nProps } from '../../../lib/getStatic'
 
 const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ job }) => {
-  const { t } = useTranslation(['jobs']);
+  const { t } = useTranslation(['common', 'jobs']);
 
   return (
     <PageLayout>
       <Head>
-        <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
+        <title>{`${job.data.title} - ${t('companyName')}`}</title>
       </Head>
 
       <PageHeader imgSrc="/jobs.jpg" imgPosition={20} />

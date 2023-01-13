@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   return (
     <PageLayout>
       <Head>
-        <title>{`${t('companyName')} - ${t('companyMotto')}`}</title>
+        <title>{`${t('contact:title1')} - ${t('companyName')}`}</title>
       </Head>
 
       <PageHeader imgSrc="/contact.jpg" imgPosition={60} />
