@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import { PlusIcon } from '@heroicons/react/solid';
 import { HeroLogo } from '../HeroLogo';
 import { BrandTrans } from '../BrandTrans/BrandTrans';
+import { FadeInContent } from '../FadeInContent';
 
 export const Hero = () => {
   const [showMore, setShowMore] = useState(false);
@@ -18,18 +19,20 @@ export const Hero = () => {
 
   return (
     <>
-      <section id="hero" className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
-        <video className="absolute min-w-full min-h-full object-cover -z-50 brightness-90 blur-sm" autoPlay muted loop>
+      <section id="hero" className="relative w-full h-[60vh] sm:h-[70vh] flex items-center justify-center overflow-hidden -z-50 bg-black">
+        <video className="absolute min-w-full min-h-full object-cover -z-50 brightness-[0.7] grayscale-[0.2] blur-sm" autoPlay muted loop>
           <source src="/hero.mp4" type="video/mp4" />
         </video>
+        <div className="absolute min-w-full min-h-full bg-dielle/20 -z-40"></div>
         <HeroLogo />
       </section>
 
-      <section className="container mx-auto py-10 sm:py-20 px-8 xl:px-40">
-        <p className="text-4xl">
-          <BrandTrans i18nKey="home:hero" />
-        </p>
-        {showMore ? <p className="mt-8">
+      <FadeInContent delay={2400}>
+        <section className="container mx-auto py-10 sm:py-20 px-8 xl:px-40">
+          <p className="text-xl sm:text-2xl lg:text-4xl">
+            <BrandTrans i18nKey="home:hero" />
+          </p>
+          {/* {showMore ? <p className="mt-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero numquam expedita, labore ipsam ratione minus eum cumque optio at inventore error fugiat provident commodi? Necessitatibus exercitationem laborum animi officia inventore.
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ipsum quam dolor, dolorum officia earum. Provident, assumenda architecto molestias, est quidem voluptate, incidunt iusto recusandae aliquam nesciunt ex voluptas doloremque?
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum iste at ea, assumenda, nam consequatur odit nihil eum eius labore possimus. Harum accusamus, quaerat officia tempore quia temporibus soluta.
@@ -40,8 +43,9 @@ export const Hero = () => {
           onClick={() => setShowMore(true)}>
           <PlusIcon className="w-5 h-5 mr-2" />
           {t("home:showMore")}
-        </a>}
-      </section>
+        </a>} */}
+        </section>
+      </FadeInContent>
     </>
   );
 }
