@@ -10,13 +10,13 @@ export const _Contact = () => {
 
   return (
     <section id="jobs">
-      <div className="container py-10 sm:py-20">
-        <h2 className="mb-10 sm:mb-16 text-4xl text-medium text-center">
+      <div className="container py-10 md:py-20">
+        <h2 className="mb-10 md:mb-16 text-4xl text-medium text-center">
           <BrandTrans i18nKey="home:contact:title" />
         </h2>
 
         <div className="flex justify-center">
-          <img src="cables2.jpg" className="hidden sm:block w-[450px] mr-8" />
+          <img src="cables2.jpg" className="hidden md:block w-[450px] mr-8" />
           <div className="max-w-[600px] ">
 
             <p className="my-4 whitespace-pre-line">

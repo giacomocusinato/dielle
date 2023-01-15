@@ -8,29 +8,29 @@ export const Footer = () => {
   const router = useRouter();
 
   return (
-    <footer className="bg-gray-100 mt-10 sm:mt-20">
+    <footer className="bg-gray-100 border-t mt-10 sm:mt-20">
       <div className="container py-10 sm:py-20">
-        <div className="grid grid-rows-2 grid-cols-2 gap-y-6 sm:flex sm:justify-between">
+        <div className="grid grid-rows-2 grid-cols-2 gap-y-6 md:flex md:justify-between">
           <img
-            className="max-w-[120px] sm:max-w-[150px] opacity-90"
+            className="max-w-[120px] sm:max-w-[150px] opacity-80"
             src="/logo-black.svg"
             alt={`${t('companyName')} - ${t('companyMotto')}`}
           />
 
           <div>
-            <h3 className="font-medium">{t('companyLegalName')}</h3>
-            <p>
+            <h3>{t('companyLegalName')}</h3>
+            <p className="font-light text-sm md:text-base">
               Galileo Galilei 1, <br />
               Galliera Veneta, PD <br />
               35015, Italy
             </p>
-            <h3 className="mt-2 font-medium">{t('footer:vatNumber')}</h3>
-            <p>02474770282</p>
+            <h3 className="mt-2">{t('footer:vatNumber')}</h3>
+            <p className="font-light text-sm md:text-base">02474770282</p>
           </div>
 
           <div>
-            <h3 className="font-medium">{t('footer:aboutUs')}</h3>
-            <ul>
+            <h3>{t('footer:aboutUs')}</h3>
+            <ul className="font-light text-sm md:text-base">
               <li>
                 <Link href={`/${router.query.locale}`}>
                   <a
@@ -72,8 +72,8 @@ export const Footer = () => {
 
 
           <div>
-            <h3 className="font-medium">{t('footer:contacts')}</h3>
-            <ul>
+            <h3>{t('footer:contacts')}</h3>
+            <ul className="font-light text-sm md:text-base">
               <li>
                 Email: <a className="underline hover:text-dielle font-light" href={`mailto:${t('companyEmail')}`}>{t('companyEmail')}</a>
               </li>
@@ -92,10 +92,10 @@ export const Footer = () => {
 
         <hr className="block my-5" />
 
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-between text-sm font-light">
           <div>&#169; {t('companyLegalName')} {new Date().getFullYear()}. All Rights Reserved.</div>
 
-          <div className="font-light">
+          <div>
             <Link href="/privacy">
               <a className="underline hover:text-dielle">Privacy policy</a>
             </Link>
