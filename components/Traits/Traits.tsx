@@ -15,7 +15,7 @@ const _Traits = () => {
 
         <div className="space-y-12">
           <div className="flex">
-            <img src="/ul-certification.svg" className="w-20 flex-shrink-0 self-start" />
+            <img src="/usa.svg" className="w-20 flex-shrink-0 self-start" />
             <div className="ml-8">
               <h3 className="mb-1 text-xl font-semibold">{t('home:traits:cert')}</h3>
               <p className="whitespace-pre-line">
