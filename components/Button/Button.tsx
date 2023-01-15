@@ -13,7 +13,6 @@ type ButtonProps = {
 };
 
 const defaultProps: ButtonProps = {
-  href: '#',
   size: 'md',
   rounded: false,
   stroked: false,
