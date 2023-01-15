@@ -1,14 +1,15 @@
 import type { NextPage } from 'next'
-import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next'
 import { Head } from '../../components/Head';
 import { PageLayout } from '../../components/PageLayout';
 import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
 import { PageHeader } from '../../components/PageHeader';
+import { Button } from '../../components/Button';
+import { useCookies } from '../../components/CookieBanner/CookiesContext';
 
 const NotFound: NextPage = () => {
   const { t } = useTranslation(['common']);
-  const router = useRouter();
+  const ctx = useCookies();
 
   return (
     <PageLayout>
@@ -16,12 +17,14 @@ const NotFound: NextPage = () => {
         <title>{`Cookie Policy - ${t('companyName')}`}</title>
       </Head>
 
-      <PageHeader imgSrc="/contact.jpg" imgPosition={60} title="Cookie policy"></PageHeader>
+      <PageHeader imgSrc="/policy.jpg" imgPosition={40} title="Cookie policy"></PageHeader>
 
       <section className="container mt-10">
-        <h2 className="text-2xl text-center mb-6">
-          This is the Cookie Policy for Dielle Impianti, accessible from <span className="text-dielle">http://dielleimpianti.it/en/cookie</span>
-        </h2>
+        <p className="mb-2">
+          This is the Cookie Policy for Dielle Impianti. If you wish to update your cookie preference click the button below.
+        </p>
+        <Button className="mb-6" onClick={() => ctx?.setShowBanner(true)}>Update cookie preference</Button>
+
         <p className="mt-3"><strong>What Are Cookies</strong></p>
         <p>As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.</p>
         <p className="mt-3"><strong>How We Use Cookies</strong></p>
@@ -56,6 +59,6 @@ const NotFound: NextPage = () => {
 
 export default NotFound;
 
-const getStaticProps = makeStaticProps(['common', 'head', 'header', 'footer',]);
+const getStaticProps = makeStaticProps(['common', 'head', 'header', 'cookies', 'footer',]);
 export { getStaticPaths, getStaticProps };
 

@@ -19,10 +19,11 @@ const NotFound: NextPage = () => {
       <PageHeader imgSrc="/policy.jpg" imgPosition={40} title="Privacy policy"></PageHeader>
 
       <section className="container mt-10">
-        <h2 className="text-2xl text-center mb-6">
-          Questa è la Privacy policy Cookie Policy per Dielle Impianti, accessibile da <span className="text-dielle">http://dielleimpianti.it/it/policy</span>
-        </h2>
-        Questa Applicazione raccoglie alcuni Dati Personali dei propri Utenti.
+        <p className="mb-6">
+          Questa è la Privacy policy Cookie Policy per Dielle Impianti.
+          <br />
+          Questa Applicazione raccoglie alcuni Dati Personali dei propri Utenti.
+        </p>
 
         <h3 className="text-xl font-medium my-3">Titolare del Trattamento dei Dati</h3>
         <p>
@@ -303,6 +304,6 @@ const NotFound: NextPage = () => {
 
 export default NotFound;
 
-const getStaticProps = makeStaticProps(['common', 'head', 'header', 'footer',]);
+const getStaticProps = makeStaticProps(['common', 'head', 'header', 'footer', 'cookies',]);
 export { getStaticPaths, getStaticProps };
 

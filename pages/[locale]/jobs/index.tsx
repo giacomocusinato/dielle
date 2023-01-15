@@ -67,7 +67,7 @@ const getStaticProps: GetStaticProps = async (ctx) => {
     return { slug, data, content };
   });
 
-  const translateProps = await getI18nProps(ctx, ['common', 'head', 'header', 'footer', 'jobs']);
+  const translateProps = await getI18nProps(ctx, ['common', 'head', 'header', 'footer', 'cookies', 'jobs']);
 
   return {
     props: {
