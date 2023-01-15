@@ -35,9 +35,9 @@ const Jobs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ jobs }
             {jobs.map(({ slug, data }: any) => (
               <Link href={`/${router.query.locale}/jobs/${slug}`} key={slug}>
                 <a>
-                  <div className="flex items-center justify-between border border-gray-200 p-3">
-                    <h3 className="text-dielle font-semibold">{data.title}</h3>
-                    <ArrowRightIcon className="w-5 text-gray-300" />
+                  <div className="flex items-center justify-between py-2 border-b border-gray-200">
+                    <h3 className="text-dielle text-xl">{data.title}</h3>
+                    <ArrowRightIcon className="w-4 text-dielle ml-2" />
                   </div>
                 </a>
               </Link>
