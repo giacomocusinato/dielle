@@ -10,6 +10,11 @@
     "text": "What are you looking for?",
     "privacy1": "I accept the",
     "privacy2": "privacy policy",
-    "submit": "Submit"
-  }
+    "submit": "Submit",
+    "error": "Please, complete all required fields."
+  },
+  "successTitle": "Thanks for reaching out!",
+  "successMessage": "We'll get back to you as soon as possible.",
+  "errorTitle": "An error occurred",
+  "errorMessage": "Please try again later or send us an email."
 }

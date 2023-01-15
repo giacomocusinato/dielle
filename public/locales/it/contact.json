@@ -10,6 +10,11 @@
     "text": "Cosa stai cercando?",
     "privacy1": "Accetto la",
     "privacy2": "privacy policy",
-    "submit": "Invia"
-  }
+    "submit": "Invia",
+    "error": "Completa tutti i cambi obbligatori."
+  },
+  "successTitle": "Grazie per averci contattato!",
+  "successMessage": "Cercheremo di risponderti il prima possibile.",
+  "errorTitle": "Qualcosa è andato storto!",
+  "errorMessage": "Prova in un secondo momento o contattaci tramite email."
 }
