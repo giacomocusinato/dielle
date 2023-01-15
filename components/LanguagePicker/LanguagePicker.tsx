@@ -28,7 +28,7 @@ export const LanguagePicker = () => {
             'flex items-center justify-end p-2 box-border w-fit focus:outline focus:outline-1 focus:outline-gray-200',
             { 'outline outline-1 outline-gray-200 bg-white/80 backdrop-blur-[3px]': open }
           )}>
-            <img src={currLang?.flag} className="mr-2 w-5 h-5" />
+            <img src={currLang?.flag} alt={`${currLang?.locale} flag`} className="mr-2 w-5 h-5" />
             <span className="font-medium text-xl uppercase w-[25px]">{currLang?.locale}</span>
             <ChevronDownIcon className="w-5 h-5 text-dielle text-xl uppercase" />
           </Listbox.Button>
@@ -49,7 +49,7 @@ export const LanguagePicker = () => {
                     <Link locale={lang.locale}>
                       <a onClick={() => { languageDetector.cache && languageDetector.cache(lang.locale); router.locale = lang.locale; }}>
                         <div className={`flex items-center p-2 cursor-pointer ${active || selected ? 'bg-gray-100' : ''}`}>
-                          <img src={lang?.flag} className="mr-2 w-5 h-5" />
+                          <img src={lang?.flag} alt={`${currLang?.locale} flag`} className="mr-2 w-5 h-5" />
                           <span className="font-medium text-xl uppercase w-[25px]">{lang?.locale}</span>
                         </div>
                       </a>

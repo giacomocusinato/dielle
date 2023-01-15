@@ -4,23 +4,22 @@ import { useCookies } from './CookiesContext';
 
 export const CookiesRootConsumer: React.FC = () => {
   const ctx = useCookies();
+
+  useEffect(() => {
+    if (ctx?.allowCookies === null) {
+      ctx?.setShowBanner(true);
+    }
+    if (ctx?.allowCookies && !ReactGA.isInitialized) {
+      ReactGA.initialize("G-58S61RB7YE");
+    }
+    if ((ctx && !ctx.allowCookies) && ReactGA.isInitialized) {
+      ReactGA.reset();
+    }
+  }, [ctx])
+
   if (!ctx) {
     return null;
   }
-
-  const { allowCookies, setShowBanner } = ctx;
-
-  useEffect(() => {
-    if (allowCookies === null) {
-      setShowBanner(true);
-    }
-    if (allowCookies && !ReactGA.isInitialized) {
-      ReactGA.initialize("G-58S61RB7YE");
-    }
-    if (!allowCookies && ReactGA.isInitialized) {
-      ReactGA.reset();
-    }
-  }, [allowCookies])
 
   return <></>
 };

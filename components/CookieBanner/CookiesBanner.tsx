@@ -22,7 +22,12 @@ export const CookiesBanner: React.FC = () => {
             <Trans
               i18nKey="cookies:message"
               components={{
-                h: <a className="underline hover:text-dielle focus:text-dielle" target="_blank" href={`/${router.query.locale}/cookie`} />
+                h: <a
+                  className="underline hover:text-dielle focus:text-dielle"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={`/${router.query.locale}/cookie`}
+                />
               }}
             />
           </p>

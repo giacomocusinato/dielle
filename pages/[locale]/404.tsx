@@ -21,7 +21,7 @@ const NotFound: NextPage = () => {
 
       <section className="flex-1 flex flex-col items-center justify-center my-10">
 
-        <img src="/cables3.jpg" className="w-[650px]" />
+        <img src="/cables3.jpg" alt="not found" className="w-[650px]" />
         <h2 className="text-4xl text-medium text-center">
           <BrandTrans i18nKey="404:message"></BrandTrans>
         </h2>

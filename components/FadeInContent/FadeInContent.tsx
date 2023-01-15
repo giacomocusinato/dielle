@@ -29,7 +29,7 @@ export const FadeInContent: React.FC<FadeInContentProps> = ({ children, delay = 
 
 
     return () => observer.disconnect();
-  }, []);
+  }, [delay]);
 
   return (<div ref={domRef} className={classNames('fade-in-content', isVisible && 'visible')}>{children}</div>);
 };

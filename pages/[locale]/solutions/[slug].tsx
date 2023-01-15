@@ -58,10 +58,10 @@ const Job: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ slug, l
 
             <div className="mt-12 space-y-[6px]">
               <div className="flex space-x-[6px]">
-                <img src="/solutions/panels.jpg" className="block flex-1 max-w-[calc(50%-3px)]" />
-                <img src="/solutions/onboard.jpg" className="block flex-1 max-w-[calc(50%-3px)]" />
+                <img src="/solutions/panels.jpg" alt="test1" className="block flex-1 max-w-[calc(50%-3px)]" />
+                <img src="/solutions/onboard.jpg" alt="test2" className="block flex-1 max-w-[calc(50%-3px)]" />
               </div>
-              <img src="/solutions/software.jpg" className="w-full" />
+              <img src="/solutions/software.jpg" alt="test3" className="w-full" />
             </div>
 
 

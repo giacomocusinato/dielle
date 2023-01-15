@@ -15,7 +15,7 @@ const _Traits = () => {
 
         <div className="space-y-12">
           <div className="flex">
-            <img src="/usa.svg" className="w-20 flex-shrink-0 self-start" />
+            <img src="/usa.svg" alt={t('home:traits:cert')} className="w-20 flex-shrink-0 self-start" />
             <div className="ml-8">
               <h3 className="mb-1 text-xl font-semibold">{t('home:traits:cert')}</h3>
               <p className="whitespace-pre-line">
@@ -25,7 +25,7 @@ const _Traits = () => {
           </div>
 
           <div className="flex">
-            <img src="/client-support.svg" className="w-20 flex-shrink-0 self-start" />
+            <img src="/client-support.svg" alt={t('home:traits:support')} className="w-20 flex-shrink-0 self-start" />
             <div className="ml-8">
               <h3 className="mb-1 text-xl font-semibold">{t('home:traits:support')}</h3>
               <p className="whitespace-pre-line">
@@ -35,7 +35,7 @@ const _Traits = () => {
           </div>
 
           <div className="flex">
-            <img src="/industry-4.svg" className="w-20 flex-shrink-0 self-start" />
+            <img src="/industry-4.svg" alt={t('home:traits:industry4')} className="w-20 flex-shrink-0 self-start" />
             <div className="ml-8">
               <h3 className="mb-1 text-xl font-semibold">{t('home:traits:industry4')}</h3>
               <p className="whitespace-pre-line">

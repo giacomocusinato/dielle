@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       <Hero />
       <Solutions />
       <img
+        alt="electrical cables"
         src="/cables.jpg"
         className="lg:max-h-[300px] w-full"
       />
