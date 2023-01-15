@@ -9,6 +9,7 @@ type ButtonProps = {
   stroked?: boolean;
   children?: React.ReactNode
   className?: string;
+  type?: 'button' | 'submit' | 'reset',
   onClick?: MouseEventHandler<HTMLButtonElement>,
 };
 
@@ -16,10 +17,11 @@ const defaultProps: ButtonProps = {
   size: 'md',
   rounded: false,
   stroked: false,
+  type: "button",
   onClick: () => { },
 }
 
-export const Button: React.FC<ButtonProps> = ({ className, children, href, onClick, ...props }) => {
+export const Button: React.FC<ButtonProps> = ({ className, children, href, onClick, type, ...props }) => {
   const classes = classNames(
     'flex items-center justify-center w-fit font-medium',
     'hover:opacity-90 transition-all duration-175',
@@ -35,7 +37,7 @@ export const Button: React.FC<ButtonProps> = ({ className, children, href, onCli
       <a className={classes}>{children}</a>
     </Link>
   ) :
-    <button onClick={onClick} className={classes}>{children}</button>
+    <button onClick={onClick} className={classes} type={type}> {children}</button >
 }
 
 Button.defaultProps = defaultProps;
