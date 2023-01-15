@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'next-i18next';
-import { PlusIcon } from '@heroicons/react/solid';
+import React, { useEffect } from 'react';
 import { HeroLogo } from '../HeroLogo';
 import { BrandTrans } from '../BrandTrans/BrandTrans';
 import { FadeInContent } from '../FadeInContent';
 
 export const Hero = () => {
-  const [showMore, setShowMore] = useState(false);
-
-  const { t } = useTranslation(['common', 'home']);
-
   useEffect(() => {
     const el = document.querySelector('video');
     if (el) {
@@ -23,11 +17,11 @@ export const Hero = () => {
         <video className="absolute min-w-full min-h-full object-cover -z-50 brightness-[0.7] grayscale-[0.2] blur-sm" autoPlay muted loop>
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute min-w-full min-h-full bg-dielle/20 -z-40"></div>
+        <div className="absolute min-w-full min-h-full bg-dielle/10 -z-40"></div>
         <HeroLogo />
       </section>
 
-      <FadeInContent delay={2400}>
+      <FadeInContent>
         <section className="container mx-auto py-10 sm:py-20 px-8 xl:px-40">
           <p className="text-xl sm:text-2xl lg:text-4xl">
             <BrandTrans i18nKey="home:hero" />
