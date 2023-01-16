@@ -1,17 +1,18 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import type { NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { LocationMarkerIcon, MailIcon, CheckIcon, ExclamationCircleIcon } from "@heroicons/react/solid";
+import classNames from 'classnames';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { LocationMarkerIcon, MailIcon, CheckIcon, ExclamationCircleIcon } from '@heroicons/react/solid';
 import { Head } from '../../components/Head';
 import { PageLayout } from '../../components/PageLayout';
 import { PageHeader } from '../../components/PageHeader';
 import { Button } from '../../components/Button';
-import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
-import classNames from 'classnames';
 import { Spinner } from '../../components/Spinner';
+import { getStaticPaths, makeStaticProps } from '../../lib/getStatic'
 
 const inputClasses = 'py-3 px-4 w-full outline outline-1 outline-gray-300 focus:outline-dielle rounded-sm';
 
@@ -32,10 +33,13 @@ const Contact: NextPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showPopup, setShowPopup] = useState<null | 'success' | 'error'>(null);
 
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
+      const token = await recaptchaRef.current?.executeAsync();
       setIsLoading(true);
-      await fetch("/cgi-bin/mailer.php", {
+      await fetch('/cgi-bin/mailer.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -146,6 +150,12 @@ const Contact: NextPage = () => {
             <Button size="lg" className="!w-full" type="submit">
               {isLoading ? <Spinner /> : t('contact:form:submit')}
             </Button>
+
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              size="invisible"
+              sitekey="Your client site key"
+            />
           </form>
 
           {showPopup &&
